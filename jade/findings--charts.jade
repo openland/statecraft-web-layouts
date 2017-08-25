@@ -1,0 +1,39 @@
+include ./_components.jade
+
+doctype html
+html
+	+head ('Statecraft')
+
+	body: .page
+		+page--side
+
+		.page--box
+			+header ('Findings', '', true)
+
+			.page--bg
+			.page--wrap: .box
+				.box--section: +findings-intro
+				.box--section
+					.page--tabs
+						a(href="#").page--tab Key findings
+						a(href="#").page--tab.is-active Charts
+						a(href="#").page--tab Recommendations
+
+					.page--text.is-charts
+						h2 Net new units by quarter
+						.chart: img(src="http://placehold.it/785x351" alt="")
+
+						h2 Net new units by year
+						.chart: img(src="http://placehold.it/785x351" alt="")
+
+						h2 Development projects by quarter
+						.chart: img(src="http://placehold.it/785x351" alt="")
+
+						h2  Development projects with 10+ units by quarter
+						.chart: img(src="http://placehold.it/785x351" alt="")
+
+				.box--section: +subscribe
+
+			.page--nav
+				a(href="#").page--nav-i #[i.icon-left-arrow]#[span Key findings]
+				a(href="#").page--nav-i #[span Recommendations]#[i.icon-right-arrow]

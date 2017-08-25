@@ -14,5 +14,45 @@ mixin head (title)
 
 		block
 
-mixin header
-	header.header&attributes(attributes): .container Header
+mixin page--side
+	.page--side&attributes(attributes) side
+
+mixin header (title, link, auth)
+	header.header&attributes(attributes)
+		if ((link != '') && link)
+			.header--title #[a(href="#")= link] / #{title}
+		else
+			.header--title= title
+
+		if (auth)
+			.header--auth: a(href="#").btn.is-sm.is-outline Sign in
+		else
+			a(href="#").header--user #[img(src="http://placehold.it/48" alt="")]Yury Lifshits
+
+mixin subscribe
+	.subscribe&attributes(attributes)
+		.subscribe--title Housing insights from Statecraft
+		.subscribe--text Subscribe and stay up to date with the latest insights from Statecraft
+
+		form(method="POST" action="").subscribe--form
+			input(type="text" placeholder="Your email address").subscribe--input
+
+			.subscribe--submit: button(type="submit").btn.is-lg.is-block Subscribe
+
+mixin page--tools
+	.page--tools&attributes(attributes)
+		.page--authors
+			a(href="#").page--author #[img(src="http://placehold.it/48" alt="")]Yury Lifshits
+			a(href="#").page--author #[img(src="http://placehold.it/48" alt="")]Stepan Korshakov
+
+		.page--contacts
+			a(href="#").page--contact #[i.icon-email]yury@statecraft.one
+
+mixin findings-intro
+	h1.page--title Housing Production in San&nbsp;Francisco 2014-2017
+
+	.page--intro
+		p This site presents a new analysis of San Francisco housing production for 2014-2017 period. To identify completed units, we looked for development projects that were in construction in a given quarter and then removed from the pipeline in the next one. Our process has also included a significant number of data cleaning steps and manual corrections. The source code can be found in the #[a(href="#") projects section].
+		p This study can be used for double-checking housing inventory reports for 2014 and 2015, and provides a new estimate for 2016 and Q1 2017 housing completions (where housing inventory report is still unpublished).
+
+	+page--tools

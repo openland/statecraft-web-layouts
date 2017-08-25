@@ -1,0 +1,32 @@
+include ./_components.jade
+
+doctype html
+html
+	+head ('Statecraft')
+
+	body: .page
+		+page--side
+
+		.page--box
+			+header ('Affordable housing preservation', 'Projects')
+
+			.page--bg
+			.page--wrap: .box
+				.box--section
+					.page--title-w
+						h1.page--title Project title placeholder
+
+						.page--title-b: a(href="#").btn.is-outline Follow project
+
+					.page--intro: p Project description text goes here. Lorem ipsum dolor sit amet.
+
+					+page--tools
+
+				.box--section: .status.is-empty
+					.status--icon
+					.status--title Project in progress
+					.status--text We are currently working on this project. Follow it and we will notify you when it’s ready.
+
+			.page--nav
+				a(href="#").page--nav-i #[i.icon-left-arrow]#[span Previous project]
+				a(href="#").page--nav-i #[span Next porject]#[i.icon-right-arrow]

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Statecraft</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+  </head>
+  <body>
+    <div class="page">
+      <div class="page--side">side</div>
+      <div class="page--box">
+        <header class="header">
+          <div class="header--title"><a href="#">Projects</a> / Housing data cleanup</div><a class="header--user" href="#"><img src="http://placehold.it/48" alt=""/>Yury Lifshits</a>
+        </header>
+        <div class="page--bg"></div>
+        <div class="page--wrap">
+          <div class="box">
+            <div class="box--section">
+              <div class="page--title-w">
+                <h1 class="page--title">Housing data cleanup</h1>
+                <div class="page--title-b"><a class="btn is-outline" href="#">Follow project</a></div>
+              </div>
+              <div class="page--intro">
+                <p>An automatic script and a sequence of manual checks to derive housing completions from SF quarterly development pipelines.</p>
+              </div>
+              <div class="page--tools">
+                <div class="page--authors"><a class="page--author" href="#"><img src="http://placehold.it/48" alt=""/>Yury Lifshits</a><a class="page--author" href="#"><img src="http://placehold.it/48" alt=""/>Stepan Korshakov</a></div>
+                <div class="page--contacts"><a class="page--contact" href="#"><i class="icon-email"></i>yury@statecraft.one</a></div>
+              </div>
+            </div>
+            <div class="box--section">
+              <div class="page--fields">
+                <div class="page--field">
+                  <div class="page--field-l">Code:</div>
+                  <div class="page--field-r">
+                    <div class="link-icon--w"><a class="link-icon" href="#"><i class="icon-github"></i>Source code</a><a class="link-icon" href="#"><i class="icon-github"></i>Step-by-step comments</a></div>
+                  </div>
+                </div>
+                <div class="page--field">
+                  <div class="page--field-l">Outputs:</div>
+                  <div class="page--field-r">
+                    <div class="link-icon--w"><a class="link-icon" href="#"><i class="icon-csv"></i>Housing completions by quarter</a><a class="link-icon" href="#"><i class="icon-csv"></i>In-construction projects by quarter</a></div>
+                  </div>
+                </div>
+                <div class="page--field">
+                  <div class="page--field-l">Findings:</div>
+                  <div class="page--field-r">This project is focused on data transformation and cleanup. The analysis of housing completions is performed in the follow-up project Housing production analysis</div>
+                </div>
+              </div>
+            </div>
+            <div class="box--section">
+              <div class="page--text is-project">
+                <h2>Methodology</h2>
+                <p>We use SF DBI’s quarterly pipeline datasets (released by DataSF) as the primary source. To identify completed projects in a given quarter, we find all developments that are listed “IN CONSTRUCTION” in the given quarter’s pipeline, and aren’t present in the next quarter’s pipeline.</p>
+                <h2>Cleanup techniques and edge cases</h2>
+                <ul>
+                  <li>We use SF DBI’s building permit id as unique identifier to check whether the project continues to be in construction in the next quarter.</li>
+                  <li>We manually inspect a few development projects that don’t have a building permit id on their record.</li>
+                  <li>We manually merge duplicate records (multiple records with the same unit counts and permit ids).</li>
+                  <li>When a given development project states different total units in different quarters, we use the largest number as the number of completed units and attribute all of them for the last quarter the project was in construction.</li>
+                  <li>When net units exceed total units (that happened!) we update net units to be equal to total units.</li>
+                  <li>When a particular project appears/disappears from the pipeline multiple times, we mark its completion only once for the last appearance.</li>
+                  <li>Our affordable units completions are calculated only for 9 quarters as corresponding counts were included only in the last 10 pipeline datasets. </li>
+                  <li>To perform a manual review, our script shows top 10 largest completed projects for each quarter.</li>
+                  <li>Projects that are most difficult to accurately account for have multiple data quality issues: varying number of units, missing building permit id or ‘multiple’ value instead of actual building permit, multiple or changing street addresses, duplicate records, and multi-phase completion schedule. These projects require manual review to achieve most accurate representation.</li>
+                  <li>In our analysis, the hardest-to-account projects are HP Shipyard Phase I (possibly duplicating 101 and 201 Donahue  Street), multiple projects at 55 Laguna Street and 218 Buchanan Street, and townhouse development at 800 Brotherhood Way.</li>
+                  <li>Since some development pipeline datasets are published with delays, our analysis provides only approximate timing attribution for completions. In other words, some units might be completed a quarter later than we account them for.</li>
+                </ul>
+                <h2>Future improvements and expansions</h2>
+                <p>Use housing inventory datasets (exist only until 2015) to resolve remaining data quality issues.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page--nav"><a class="page--nav-i" href="#"><i class="icon-left-arrow"></i><span>Previous project</span></a><a class="page--nav-i" href="#"><span>Next porject</span><i class="icon-right-arrow"></i></a></div>
+      </div>
+    </div>
+  </body>
+</html>

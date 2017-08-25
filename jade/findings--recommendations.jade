@@ -1,0 +1,60 @@
+include ./_components.jade
+
+doctype html
+html
+	+head ('Statecraft')
+
+	body: .page
+		+page--side
+
+		.page--box
+			+header ('Findings', '', true)
+
+			.page--bg
+			.page--wrap: .box
+				.box--section: +findings-intro
+				.box--section
+					.page--tabs
+						a(href="#").page--tab Key findings
+						a(href="#").page--tab Charts
+						a(href="#").page--tab.is-active Recommendations
+
+					.page--text
+						h2 Audit SF Mayor’s Housing Meter
+						ol
+							li Identify original data source used in producing SF Mayor’s Housing Meter.
+							li Identify differences in reporting processes that led to differences in reported values.
+							li Recommend processes changes that will keep all city’s housing reports in sync.
+
+						h2 Audit building permit fees to identify potential under-collected revenue
+						ol
+							li Procure building permit fees dataset.
+							li Compare fees with unit counts from housing inventory reports and other relevant sources.
+							li Identify development projects with anomaly low fees-per-unit ratios.
+							li Perform manual reviews for identified candidates for under-collected fee cases.
+
+						h2 Improve housing reporting processes
+						ol
+							li Document current processes, including edge case handling.
+							li Create a central software system that hosts all up-to-date housing datasets, both open and protected.
+							li Develop tools for automatic and semi-automatic report generation to reduce reporting delays.
+							li Establish an official cross-departmental working group to coordinate housing analytics activities.
+
+						h2 Perform a major review of city’s affordable housing strategy
+						ol
+							li Review all creation and preservation solutions in city’s portfolio.
+							li Calculate affordable production estimates for the next 3-6 years.
+							li Estimate projected losses from current affordable stock through evictions.
+							li Compare net change estimates with RHNA goals.
+							li Identify new strategies and policies that can help meet RHNA goals and Mayor’s affordable housing target for 2020.
+
+						h2 Build predictive models for housing production
+						ol
+							li Use building permit data and historic completion rates to estimate next year’s housing production.
+							li Include future projections in annual housing inventory reports.
+
+				.box--section: +subscribe
+
+			.page--nav
+				a(href="#").page--nav-i #[i.icon-first-arrow]#[span Key findings]
+				a(href="#").page--nav-i #[i.icon-left-arrow]#[span Charts]

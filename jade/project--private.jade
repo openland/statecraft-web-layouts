@@ -1,0 +1,28 @@
+include ./_components.jade
+
+doctype html
+html
+	+head ('Statecraft')
+
+	body: .page
+		+page--side
+
+		.page--box
+			+header ('Housing data cleanup', 'Projects')
+
+			.page--bg
+			.page--wrap: .box
+				.box--section
+					h1.page--title Affordable housing preservation
+
+					.page--intro: p Analysis of affordable and rent-control stock, annual loss of affordable units, and near-future projections.
+
+					+page--tools
+
+				.box--section: .status.is-private
+					.status--icon
+					.status--title This project is in private mode
+					.status--btn: a(href="#").btn Request invite
+
+			.page--nav
+				a(href="#").page--nav-i #[i.icon-left-arrow]#[span Previous project]

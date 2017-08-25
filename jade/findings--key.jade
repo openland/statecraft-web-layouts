@@ -1,0 +1,45 @@
+include ./_components.jade
+
+doctype html
+html
+	+head ('Statecraft')
+
+	body: .page
+		+page--side
+
+		.page--box
+			+header ('Findings', '', true)
+
+			.page--bg
+			.page--wrap: .box
+				.box--section: +findings-intro
+				.box--section
+					.page--tabs
+						a(href="#").page--tab.is-active Key findings
+						a(href="#").page--tab Charts
+						a(href="#").page--tab Recommendations
+
+					.page--text
+						img(src="http://placehold.it/400x350" alt="" align="right")
+
+						h2 2016 was likely a record year for housing production
+						p Our analysis estimates 5815 net new units in 2016 and 1062 net new units in Q1 2017. These are historically record-breaking numbers for San Francisco. Note that the actual numbers might be lower after further manual inspection of every “marked as completed” project record. While 2016 numbers are highly encouraging, the total number of in-construction units declines for the last 7 consecutive quarters. There are only 6105 units in construction as of Q1 2017. As a result, 2017 and 2018 are unlikely to match 2016 completion numbers.
+
+						h2 Affordable housing production is in crisis
+						p Our primary data source (development pipelines) started tracking affordable units from 2015. For the period of 2015-2017Q1 we were able to identify only #[em 640 net affordable units completed], less than 10% of total net units completed for the same period. Moreover, the latest affordable housing production numbers are below the number of Ellis Act and owner move-in eviction notices (127 and 397 in #[a(href="#") the most recent annual report] by Rent Board). #[em While additional analysis is necessary, our analysis indicates a possibility of net loss of affordable units in 2016]. RHNA goals for San Francisco call for roughly 2000 affordable unit creation per year for the 2015-2022 eight year period. At the same time, both our estimates and housing inventory reports never shown affordable housing production above 1000 units per year. 
+
+						h2 SF Mayor’s Housing Meter requires an audit
+						p #[a(href="#") San Francisco Mayor’s Housing Meter] states #[strong 17466] net new units created for the period from 2014 to May 2017. Our net new estimate for the same period is #[strong 13398] units. For 01/2014 - 12/2015 period, our analysis nearly matches Housing Inventory report by SF Planning (6521 vs. 6468). As of August 2017, housing inventory report for 2016 is still unpublished. Both our analysis and Housing Inventory report produce publicly available completion tables while SF Mayor’s Housing Meter doesn’t include any public sources or references. 
+						p Housing Meter’s also states #[strong 6460] affordable units created for the same period, i.e. production rate of 1800+ affordable units per year. Both our analysis and historic data from Housing Inventory reports never showed affordable production rate exceeding 1000 affordable units per year. Given these major differences between our analysis and Housing Inventory on one side, and SF Mayor’s Housing Meter on the other side, we recommend to audit Housing Meter metrics and underlying reporting process.
+
+						h2 Development pipeline datasets include a significant number of inaccuracies
+						p Throughout our analysis we identified a significant number of data quality issues with SF development pipeline datasets, including duplicate records, missing building permit ids, changing unit numbers, net units exceeding total units, and comments contradicting unit counts. While we made manual corrections whenever possible, better data quality is necessary for producing highly accurate housing production reports.
+
+						h2 There is a possibility of under-collected revenue from building permit fees
+						p Given data quality issues in development pipeline datasets, there is a possibility of similar issues in building permit fee collection process. If this assumption proves to be correct, the city might find significant amount under-collected revenue. We encourage the city to compare housing completion data with collected fees to identify anomalies in fees-to-units ratios.
+
+				.box--section: +subscribe
+
+			.page--nav
+				a(href="#").page--nav-i #[span Charts]#[i.icon-right-arrow]
+				a(href="#").page--nav-i #[span Recommendations]#[i.icon-last-arrow]
