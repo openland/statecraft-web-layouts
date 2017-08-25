@@ -1,0 +1,439 @@
+/*
+  HTML5 Reset :: reset.css
+  -------------------------------------------------------------------
+  Подготовлен командой LiveHTML | by LiveHTML :: http://livehtml.io
+  -------------------------------------------------------------------
+  Выражаем особую благодарность людям, чьи труды способствовали появлению данного ресета:
+  We have learned much from/been inspired by/taken code where offered from:
+
+  Eric Meyer          :: http://ericmeyer.com
+  HTML5 Doctor        :: http://html5doctor.com
+  and the HTML5 Boilerplate :: http://html5boilerplate.com
+
+-------------------------------------------------------------------------------*/
+/* Сбрасываем значения по умолчанию для элементов | Let's default this puppy out
+-------------------------------------------------------------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,400i,700);
+@import "../fonts/icomoon/style.css";
+html,
+body,
+body div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+header,
+section,
+footer {
+  clear: both;
+}
+/* Всегда показывать полосу прокрутки (чтобы сайт не прыгал, когда на других страницах нет данной полосы)
+   force a vertical scrollbar to prevent a jumpy page */
+html {
+  overflow-y: scroll;
+}
+/* Добавляем буллеты к UL и цифры к OL, т.к. в контенте могут использоваться стандартные списки
+  we can use default ULs & OLs with bullets */
+ul {
+  list-style: outside disc;
+  margin: 15px 0 15px 30px;
+}
+ol {
+  list-style: outside decimal;
+  margin: 15px 0 15px 30px;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+td img {
+  vertical-align: top;
+}
+/* Сбрасываем отступы у элементов форм
+  Webkit browsers add a 2px margin outside the chrome of form elements */
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  outline: none;
+}
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+input,
+select {
+  vertical-align: middle;
+}
+input[type=radio],
+input[type=checkbox] {
+  margin: 1px 4px 4px 0;
+}
+input[type=text],
+input[type=password] {
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+textarea {
+  overflow: auto;
+  resize: vertical;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+/* Решение проблемы с обрезанием стилизованных кнопок в IE | make buttons play nice in IE */
+button,
+input[type=submit] {
+  width: auto;
+  overflow: visible;
+}
+.ie7 input[type=submit],
+.ie7 input[type=reset],
+.ie7 input[type=button] {
+  -webkit-filter: chroma(color=#000000);
+  filter: chroma(color=#000000);
+}
+/* Курсор-указатель на кликабельных элементах | hand cursor on clickable elements */
+input[type=button],
+input[type=submit],
+button {
+  cursor: pointer;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+small {
+  font-size: 85%;
+}
+strong {
+  font-weight: bold;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+}
+/* Стандартизируем моноширные элементы | standardize any monospaced elements */
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, sans-serif;
+}
+pre {
+  white-space: pre;
+  /* CSS2 */
+  white-space: pre-wrap;
+  /* CSS 2.1 */
+  white-space: pre-line;
+  /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word;
+  /* IE */
+}
+/* Устанавливаем произвольный цвет для выделения (не забываем убрать тень для текста)
+  Custom text-selection colors (remove any text shadows: twitter.com/miketaylr/status/12228805301) */
+/* ::-moz-selection{ background:#fcd700; color:#fff; text-shadow:none; } */
+/* ::selection { background:#fcd700; color:#fff; text-shadow:none; } */
+/* Устанавливаем произвольный цвет подсветки ссылок на Apple устройствах: j.mp/webkit-tap-highlight-color */
+/* a:link {-webkit-tap-highlight-color:#fcd700;} */
+/* Правильный ресайз картинок в IE7
+  scale images in IE7 more attractively */
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
+}
+/* Сброс float блоков | let's clear some floats */
+.clear {
+  clear: both;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+}
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Coded in LiveHTML :: http://livehtml.io */
+html {
+  min-width: auto;
+  width: auto;
+  height: 100%;
+}
+body {
+  font: normal normal 14px/20px 'Nunito Sans', arial, sans-serif;
+  background: #ffffff;
+  color: #000000;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  min-width: 900px;
+  min-height: initial;
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+}
+body input,
+body textarea,
+body button {
+  font-family: 'Nunito Sans', arial, sans-serif;
+}
+body *,
+body *:before,
+body *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.header {
+  background: #ffffff;
+}
+.page {
+  padding: 0 0 0 238px;
+  background: #f2f5f8;
+  min-width: auto;
+  min-height: 100vh;
+}
+@media (max-width: 1239px) {
+  .page {
+    padding: 0;
+    overflow: hidden;
+  }
+}
+.page--side {
+  background: #182642;
+  color: #ffffff;
+  position: fixed;
+  top: 0;
+  right: auto;
+  bottom: 0;
+  left: 0;
+  width: 238px;
+  height: auto;
+}
+@media (max-width: 1239px) {
+  .page--side {
+    width: 86px;
+    height: auto;
+  }
+}
+.page--box {
+  padding: 0 0 100px;
+}
+@media (max-width: 1239px) {
+  .page--box {
+    margin: 0 0 0 auto;
+    width: -webkit-calc(100% - 86px);
+    width: calc(100% - 86px);
+    height: auto;
+  }
+  .page--box.is-shown {
+    -webkit-transform: translate(152px, 0px);
+    -moz-transform: translate(152px, 0px);
+    -ms-transform: translate(152px, 0px);
+    -o-transform: translate(152px, 0px);
+    transform: translate(152px, 0px);
+  }
+}
+.page--bg {
+  background: url(../img/page--bg.jpg) center center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  margin: 0 0 -200px;
+  z-index: 1;
+  width: auto;
+  height: 360px;
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+}
+.page--bg:before {
+  content: "";
+  background: rgba(0, 17, 88, 0.1);
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.page--wrap {
+  margin: 0 auto;
+  z-index: 2;
+  max-width: 945px;
+  max-height: initial;
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+}
+.white-box {
+  background: #ffffff;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  width: auto;
+  height: 1000px;
+}
+.visible-md,
+.visible-lg {
+  display: none;
+}
+@media (max-width: 1239px) {
+  .visible-md {
+    display: block;
+  }
+  .hidden-md {
+    display: none !important;
+  }
+}
+@media (min-width: 1240px) {
+  .visible-lg {
+    display: block;
+  }
+  .hidden-lg {
+    display: none !important;
+  }
+}

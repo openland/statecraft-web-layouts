@@ -1,0 +1,141 @@
+@import "_mixins.less";
+@import "_reset.less";
+@import "_fonts.less";
+@import "_colors.less";
+
+// --------
+
+// @import "plugins/plugin-name.less";
+
+// --------
+
+	@screen-md-max: 1239px;
+	@screen-lg-min: 1240px;
+
+	@media-md-only: ~"(max-width: @{screen-md-max})";
+	@media-lg-only: ~"(min-width: @{screen-lg-min})";
+
+// --------
+
+html { min-width: auto;
+	.size (auto, 100%);
+}
+
+body {
+	font: normal normal 14px/20px 'Nunito Sans', arial, sans-serif;
+	background: @white;
+	color: @black;
+
+	-webkit-text-size-adjust: 100%;
+
+	.font-smoothing (antialiased);
+	.box-sizing (border-box);
+	.min-size (900px);
+	.position (relative);
+
+	input, textarea, button { font-family: 'Nunito Sans', arial, sans-serif; }
+	*, *:before, *:after { .box-sizing (border-box); }
+}
+
+.left { float: left; }
+.right { float: right; }
+.clearfix { *zoom: 1;
+	&:after { clear: both; }
+	&:before, &:after { content: " ";
+		.display (table);
+	}
+}
+
+// --------
+
+.header {
+	background: @white;
+}
+
+// --------
+
+.page {
+	padding: 0 0 0 238px;
+	background: @bg;
+
+	.min-size (auto, 100vh);
+
+	@media @media-md-only {
+		padding: 0;
+		overflow: hidden;
+	}
+
+	&--side {
+		background: @side;
+		color: @white;
+
+		.position (fixed, 0, auto, 0, 0);
+		.size (238px);
+
+		@media @media-md-only {
+			.size (86px);
+		}
+	}
+
+	&--box {
+		padding: 0 0 100px;
+
+		@media @media-md-only {
+			margin: 0 0 0 auto;
+
+			.size (~'calc(100% - 86px)');
+
+			&.is-shown {
+				.transform (translate(152px, 0));
+			}
+		}
+	}
+
+	&--bg {
+		background: url(../img/page--bg.jpg) center center no-repeat;
+		background-size: cover;
+		margin: 0 0 -200px;
+		z-index: 1;
+
+		.size (auto, 360px);
+		.position (relative);
+
+		&:before {
+			content: "";
+			background: fade(#001158, 10);
+
+			.display (block);
+			.position (absolute, 0, 0, 0, 0);
+		}
+	}
+
+	&--wrap {
+		margin: 0 auto;
+		z-index: 2;
+
+		.max-size (945px);
+		.position (relative);
+	}
+}
+
+.white-box {
+	background: @white;
+	border-radius: 3px;
+
+	.size (auto, 1000px);
+}
+
+// --------
+
+.visible-md,
+.visible-lg { .display (none); }
+
+@media @media-md-only {
+	.visible-md { .display (block); }
+	.hidden-md { .display (none)!important; }
+}
+
+@media @media-lg-only {
+	.visible-lg { .display (block); }
+	.hidden-lg { .display (none)!important; }
+}
