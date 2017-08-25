@@ -610,7 +610,7 @@ body *:after {
   }
 }
 .st-page--bg {
-  background: url(../img/page--bg.jpg) center center no-repeat;
+  background: center center no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
   margin: 0 0 -200px;
