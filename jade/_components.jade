@@ -14,8 +14,31 @@ mixin head (title)
 
 		block
 
-mixin page--side
-	.st-page--side&attributes(attributes) side
+mixin page--side (item, sub)
+	.st-side&attributes(attributes)
+		a(href="#").st-side--toggler: i
+
+		.st-side--logo: img(src="http://placehold.it/128" alt="")
+		.st-side--title San Francisco
+		.st-side--text Housing
+
+		ul.st-side--nav
+			li(class=(item == 1) ? 'is-active' : '').st-side--item
+				a(href="#").st-side--link #[i.icon-findings]Findings
+				ul.st-side--sub
+					li(class=((item == 1) & (sub == 1)) ? 'is-active' : ''): a(href="#") Charts
+					li(class=((item == 1) & (sub == 2)) ? 'is-active' : ''): a(href="#") Recommendations
+
+			li(class=(item == 2) ? 'is-active' : '').st-side--item
+				a(href="#").st-side--link #[i.icon-projects]Projects
+				ul.st-side--sub
+					li(class=((item == 2) & (sub == 1)) ? 'is-active' : ''): a(href="#") Housing data cleanup
+					li(class=((item == 2) & (sub == 2)) ? 'is-active' : ''): a(href="#") Housing production analysis
+					li(class=((item == 2) & (sub == 3)) ? 'is-active' : ''): a(href="#") Affordable housing preservation
+
+			li(class=(item == 3) ? 'is-active' : '').st-side--item: a(href="#").st-side--link #[i.icon-data-sources]Data Sources
+
+		a(href="#").st-side--powered #[span Powered by] Statecraft
 
 mixin header (title, link, auth)
 	header.st-header&attributes(attributes)

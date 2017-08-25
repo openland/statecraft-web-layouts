@@ -239,17 +239,13 @@ body {
 		overflow: hidden;
 	}
 
-	&--side {
-		background: @side;
-		color: @white;
+	&--box {
+		z-index: 1;
+		padding: 0 0 54px;
+		transition: 200ms all ease;
 
-		.position (fixed, 0, auto, 0, 0);
-		.size (238px);
+		.position (relative);
 
-		@media @media-md-only { .size (86px); }
-	}
-
-	&--box { padding: 0 0 54px;
 		@media @media-md-only { margin: 0 0 0 auto;
 			.size (~'calc(100% - 86px)');
 
@@ -792,6 +788,245 @@ body {
 		.size (~'calc(25% - 7px)');
 
 		@media @media-md-only { .size (~'calc(50% - 7px)'); }
+	}
+}
+
+.st-side {
+	background: @side;
+	color: @white;
+	padding: 40px 0 0;
+	overflow: hidden;
+	z-index: 2;
+
+	.position (fixed, 0, auto, 0, 0);
+	.size (238px);
+
+	&--toggler {
+		color: @white;
+		text-decoration: none;
+
+		.display (none);
+		.position (relative);
+		.size (auto, 62px);
+
+		i, &:before, &:after {
+			background: @white;
+			margin: -1px 0 0 -8px;
+
+			.size (16px, 2px);
+			.display (block);
+			.position-tl (absolute, 50%, 50%);
+		}
+
+		&:before, &:after { content: ""; }
+		&:before { margin-top: -7px; }
+		&:after { margin-top: 5px; }
+		&.is-active { .size (auto, 64px);
+			i, &:after { .display (none); }
+			&:before {
+				text-align: center;
+				background: none;
+				margin: 0;
+
+				.size (auto);
+				.icon ('\e905');
+				.font (14px);
+				.position (absolute, 25px, 0, auto, 0);
+			}
+		}
+	}
+
+	&--logo {
+		overflow: hidden;
+		border-radius: 64px;
+		margin: 0 auto 16px;
+
+		.size (64px, 64px);
+
+		img {
+			.display (block);
+			.size (100%);
+		}
+	}
+
+	&--title {
+		text-align: center;
+		margin: 0 0 3px;
+
+		.font (18px, 22px, 700);
+	}
+
+	&--text {
+		text-align: center;
+		color: @blue-5;
+		margin: 0 0 27px;
+
+		.font (14px, 20px);
+	}
+
+	&--nav {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		.display (block);
+	}
+
+	&--item {
+		.display (block);
+	}
+
+	&--link {
+		padding: 15px 30px 15px 60px;
+		text-decoration: none;
+		color: @white;
+		z-index: 1;
+		transition: 200ms all ease;
+		white-space: nowrap;
+
+		.display (block);
+		.font (14px, 20px);
+		.position (relative);
+		.size (auto, 50px);
+
+		&:hover { background: fade(@white, 5); }
+		i {
+			.display (block);
+			.position-tl (absolute, 15px, 30px);
+			.font (16px, 20px);
+
+			&.icon-projects { .font (13px, 20px); }
+		}
+	}
+
+	&--sub {
+		list-style: none;
+		margin: -1px 0 0;
+		padding: 0 0 17px;
+		z-index: 2;
+
+		.display (none);
+		.size (238px);
+		.position (relative);
+
+		li { margin: 0 0 17px;
+			.display (block);
+
+			&:last-child { margin: 0; }
+		}
+
+		a {
+			text-decoration: none;
+			color: @blue-5;
+			padding: 0 30px 0 60px;
+			transition: 200ms all ease;
+
+			.display (block);
+			.font (12px, 16px);
+
+			&:hover { color: @white; }
+		}
+
+		li.is-active a { color: @white; }
+	}
+
+	&--item.is-active { background: @side-sel; }
+	&--item.is-active & {
+		&--sub { .display (block); }
+		&--link {
+			background: none;
+			color: @blue-1;
+		}
+	}
+
+	&--powered {
+		text-align: center;
+		text-decoration: none;
+		color: @white;
+		padding: 15px 0 16px;
+		background: @blue-4;
+		transition: 200ms all ease;
+		white-space: nowrap;
+
+		.position (absolute, auto, 0, 0, 0);
+		.display (block);
+		.font (13px, 20px);
+
+		&:hover { background: multiply(@white, fade(@blue-4, 95)); }
+		&:before {
+			margin: 0 9px 0 0;
+			color: #ffd235;
+
+			.icon ('\e902');
+			.font (12px, 20px);
+		}
+	}
+
+	@media @media-md-only {
+		transition: 200ms all ease;
+		padding: 0;
+
+		.size (86px);
+
+		&--toggler {
+			.display (block);
+		}
+
+		* {
+			transition: none!important;
+		}
+
+		&:not(.is-shown) & {
+			&--logo {
+				margin-bottom: 23px;
+
+				.size (48px, 48px);
+			}
+
+			&--title,
+			&--text {
+				.display (none);
+			}
+
+			&--link {
+				.font (0);
+
+				i {
+					text-align: center;
+					left: 0;
+
+					.size (86px);
+				}
+			}
+
+			&--item.is-active .st-side--sub {
+				.display (none);
+			}
+
+			&--powered {
+				padding: 36px 0 14px;
+
+				&:before {
+					text-align: center;
+					margin: 0;
+
+					.display (block);
+					.position (absolute, 16px, 0, auto, 0);
+				}
+
+				span {
+					.display (none);
+				}
+			}
+		}
+
+		&.is-shown {
+			.size (238px);
+		}
+
+		&.is-shown & {
+
+		}
 	}
 }
 
