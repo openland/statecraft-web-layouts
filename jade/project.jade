@@ -4,42 +4,42 @@ doctype html
 html
 	+head ('Statecraft')
 
-	body: .page
+	body: .st-page
 		+page--side
 
-		.page--box
+		.st-page--box
 			+header ('Housing data cleanup', 'Projects')
 
-			.page--bg
-			.page--wrap: .box
-				.box--section
-					.page--title-w
-						h1.page--title Housing data cleanup
+			.st-page--bg
+			.st-page--wrap: .st-box
+				.st-box--section
+					.st-page--title-w
+						h1.st-page--title Housing data cleanup
 
-						.page--title-b: a(href="#").btn.is-outline Follow project
+						.st-page--title-b: a(href="#").st-btn.is-outline Follow project
 
-					.page--intro: p An automatic script and a sequence of manual checks to derive housing completions from SF quarterly development pipelines.
+					.st-page--intro: p An automatic script and a sequence of manual checks to derive housing completions from SF quarterly development pipelines.
 
 					+page--tools
 
-				.box--section: .page--fields
-					.page--field
-						.page--field-l Code:
-						.page--field-r: .link-icon--w
-							a(href="#").link-icon #[i.icon-github]Source code
-							a(href="#").link-icon #[i.icon-github]Step-by-step comments
+				.st-box--section: .st-page--fields
+					.st-page--field
+						.st-page--field-l Code:
+						.st-page--field-r: .st-link-icon--w
+							a(href="#").st-link-icon #[i.icon-github]Source code
+							a(href="#").st-link-icon #[i.icon-github]Step-by-step comments
 
-					.page--field
-						.page--field-l Outputs:
-						.page--field-r: .link-icon--w
-							a(href="#").link-icon #[i.icon-csv]Housing completions by quarter
-							a(href="#").link-icon #[i.icon-csv]In-construction projects by quarter
+					.st-page--field
+						.st-page--field-l Outputs:
+						.st-page--field-r: .st-link-icon--w
+							a(href="#").st-link-icon #[i.icon-csv]Housing completions by quarter
+							a(href="#").st-link-icon #[i.icon-csv]In-construction projects by quarter
 
-					.page--field
-						.page--field-l Findings:
-						.page--field-r This project is focused on data transformation and cleanup. The analysis of housing completions is performed in the follow-up project Housing production analysis
+					.st-page--field
+						.st-page--field-l Findings:
+						.st-page--field-r This project is focused on data transformation and cleanup. The analysis of housing completions is performed in the follow-up project Housing production analysis
 
-				.box--section: .page--text.is-project
+				.st-box--section: .st-page--text.is-project
 					h2 Methodology
 					p We use SF DBI’s quarterly pipeline datasets (released by DataSF) as the primary source. To identify completed projects in a given quarter, we find all developments that are listed “IN CONSTRUCTION” in the given quarter’s pipeline, and aren’t present in the next quarter’s pipeline.
 
@@ -60,6 +60,6 @@ html
 					h2 Future improvements and expansions
 					p Use housing inventory datasets (exist only until 2015) to resolve remaining data quality issues.
 
-			.page--nav
-				a(href="#").page--nav-i #[i.icon-left-arrow]#[span Previous project]
-				a(href="#").page--nav-i #[span Next porject]#[i.icon-right-arrow]
+			.st-page--nav
+				a(href="#").st-page--nav-i #[i.icon-left-arrow]#[span Previous project]
+				a(href="#").st-page--nav-i #[span Next porject]#[i.icon-right-arrow]

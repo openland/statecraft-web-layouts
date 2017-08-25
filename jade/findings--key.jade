@@ -4,22 +4,22 @@ doctype html
 html
 	+head ('Statecraft')
 
-	body: .page
+	body: .st-page
 		+page--side
 
-		.page--box
+		.st-page--box
 			+header ('Findings', '', true)
 
-			.page--bg
-			.page--wrap: .box
-				.box--section: +findings-intro
-				.box--section
-					.page--tabs
-						a(href="#").page--tab.is-active Key findings
-						a(href="#").page--tab Charts
-						a(href="#").page--tab Recommendations
+			.st-page--bg
+			.st-page--wrap: .st-box
+				.st-box--section: +findings-intro
+				.st-box--section
+					.st-page--tabs
+						a(href="#").st-page--tab.is-active Key findings
+						a(href="#").st-page--tab Charts
+						a(href="#").st-page--tab Recommendations
 
-					.page--text
+					.st-page--text
 						img(src="http://placehold.it/400x350" alt="" align="right")
 
 						h2 2016 was likely a record year for housing production
@@ -38,8 +38,8 @@ html
 						h2 There is a possibility of under-collected revenue from building permit fees
 						p Given data quality issues in development pipeline datasets, there is a possibility of similar issues in building permit fee collection process. If this assumption proves to be correct, the city might find significant amount under-collected revenue. We encourage the city to compare housing completion data with collected fees to identify anomalies in fees-to-units ratios.
 
-				.box--section: +subscribe
+				.st-box--section: +subscribe
 
-			.page--nav
-				a(href="#").page--nav-i #[span Charts]#[i.icon-right-arrow]
-				a(href="#").page--nav-i #[span Recommendations]#[i.icon-last-arrow]
+			.st-page--nav
+				a(href="#").st-page--nav-i #[span Charts]#[i.icon-right-arrow]
+				a(href="#").st-page--nav-i #[span Recommendations]#[i.icon-last-arrow]

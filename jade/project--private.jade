@@ -4,25 +4,25 @@ doctype html
 html
 	+head ('Statecraft')
 
-	body: .page
+	body: .st-page
 		+page--side
 
-		.page--box
+		.st-page--box
 			+header ('Housing data cleanup', 'Projects')
 
-			.page--bg
-			.page--wrap: .box
-				.box--section
-					h1.page--title Affordable housing preservation
+			.st-page--bg
+			.st-page--wrap: .st-box
+				.st-box--section
+					h1.st-page--title Affordable housing preservation
 
-					.page--intro: p Analysis of affordable and rent-control stock, annual loss of affordable units, and near-future projections.
+					.st-page--intro: p Analysis of affordable and rent-control stock, annual loss of affordable units, and near-future projections.
 
 					+page--tools
 
-				.box--section: .status.is-private
-					.status--icon
-					.status--title This project is in private mode
-					.status--btn: a(href="#").btn Request invite
+				.st-box--section: .st-status.is-private
+					.st-status--icon
+					.st-status--title This project is in private mode
+					.st-status--btn: a(href="#").st-btn Request invite
 
-			.page--nav
-				a(href="#").page--nav-i #[i.icon-left-arrow]#[span Previous project]
+			.st-page--nav
+				a(href="#").st-page--nav-i #[i.icon-left-arrow]#[span Previous project]

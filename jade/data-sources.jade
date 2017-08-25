@@ -4,86 +4,86 @@ doctype html
 html
 	+head ('Statecraft')
 
-	body: .page
+	body: .st-page
 		+page--side
 
-		.page--box
+		.st-page--box
 			+header ('Data sources').without-shadow
 
-			.navigation
-				ul.navigation--list
-					li.navigation--item.is-active: a(href="#") All
-					li.navigation--item: a(href="#") Documents
-					li.navigation--item: a(href="#") Datasets
-					li.navigation--item: a(href="#") Links
-					li.navigation--item: a(href="#") Data needs
+			.st-navigation
+				ul.st-navigation--list
+					li.st-navigation--item.is-active: a(href="#") All
+					li.st-navigation--item: a(href="#") Documents
+					li.st-navigation--item: a(href="#") Datasets
+					li.st-navigation--item: a(href="#") Links
+					li.st-navigation--item: a(href="#") Data needs
 
-				.navigation--btn: a(href="#").btn.is-sm.is-block Add a source
+				.st-navigation--btn: a(href="#").st-btn.is-sm.is-block Add a source
 
-			.page--bg
-			.page--grid
-				.page--col: .box.in-grid: .data
-					.data--title #[i.icon-datasets-c]Datasets
-					.data--section
-						.data--label Development pipelines
-						.data--links
-							.data--grid: a(href="#").data--link #[i.icon-datasets]Q4 2013
-							.data--grid
-								a(href="#").data--link #[i.icon-datasets]Q1 2014
-								a(href="#").data--link #[i.icon-datasets]Q2 2014
-								a(href="#").data--link #[i.icon-datasets]Q3 2014
-								a(href="#").data--link #[i.icon-datasets]Q4 2014
+			.st-page--bg
+			.st-page--grid
+				.st-page--col: .st-box.in-grid: .st-data
+					.st-data--title #[i.icon-datasets-c]Datasets
+					.st-data--section
+						.st-data--label Development pipelines
+						.st-data--links
+							.st-data--grid: a(href="#").st-data--link #[i.icon-datasets]Q4 2013
+							.st-data--grid
+								a(href="#").st-data--link #[i.icon-datasets]Q1 2014
+								a(href="#").st-data--link #[i.icon-datasets]Q2 2014
+								a(href="#").st-data--link #[i.icon-datasets]Q3 2014
+								a(href="#").st-data--link #[i.icon-datasets]Q4 2014
 
-							.data--grid
-								a(href="#").data--link #[i.icon-datasets]Q1 2015
-								a(href="#").data--link #[i.icon-datasets]Q2 2015
-								a(href="#").data--link #[i.icon-datasets]Q3 2015
-								a(href="#").data--link #[i.icon-datasets]Q4 2015
+							.st-data--grid
+								a(href="#").st-data--link #[i.icon-datasets]Q1 2015
+								a(href="#").st-data--link #[i.icon-datasets]Q2 2015
+								a(href="#").st-data--link #[i.icon-datasets]Q3 2015
+								a(href="#").st-data--link #[i.icon-datasets]Q4 2015
 
-							.data--grid
-								a(href="#").data--link #[i.icon-datasets]Q1 2016
-								a(href="#").data--link #[i.icon-datasets]Q2 2016
-								a(href="#").data--link #[i.icon-datasets]Q3 2016
-								a(href="#").data--link #[i.icon-datasets]Q4 2016
+							.st-data--grid
+								a(href="#").st-data--link #[i.icon-datasets]Q1 2016
+								a(href="#").st-data--link #[i.icon-datasets]Q2 2016
+								a(href="#").st-data--link #[i.icon-datasets]Q3 2016
+								a(href="#").st-data--link #[i.icon-datasets]Q4 2016
 
-							.data--grid: a(href="#").data--link #[i.icon-datasets]Q1 2017
+							.st-data--grid: a(href="#").st-data--link #[i.icon-datasets]Q1 2017
 
-					.data--section
-						.data--label Housing inventory
-						.data--links
-							a(href="#").data--link #[i.icon-datasets]2015 Inventory
-							a(href="#").data--link #[i.icon-datasets]2014 Inventory
+					.st-data--section
+						.st-data--label Housing inventory
+						.st-data--links
+							a(href="#").st-data--link #[i.icon-datasets]2015 Inventory
+							a(href="#").st-data--link #[i.icon-datasets]2014 Inventory
 
-					.data--section
-						.data--label Evictions notices
-						.data--links: a(href="#").data--link #[i.icon-datasets]Evictions notices details
+					.st-data--section
+						.st-data--label Evictions notices
+						.st-data--links: a(href="#").st-data--link #[i.icon-datasets]Evictions notices details
 
-					.data--section
-						.data--label Building permits
-						.data--links: a(href="#").data--link #[i.icon-documents]San Francisco Bay Area Progress in Meeting 2015-2023 Regional Housing Need Allocation (RHNA)
+					.st-data--section
+						.st-data--label Building permits
+						.st-data--links: a(href="#").st-data--link #[i.icon-documents]San Francisco Bay Area Progress in Meeting 2015-2023 Regional Housing Need Allocation (RHNA)
 
-				.page--col
-					.box.in-grid: .data
-						.data--title #[i.icon-documents-c]Documents
-						.data--links
-							a(href="#").data--link #[i.icon-documents]Housing Inventory Report 2015
-							a(href="#").data--link #[i.icon-documents]Housing Inventory Report 2014
-							a(href="#").data--link #[i.icon-documents]RHNA Progress Report 2015
-							a(href="#").data--link #[i.icon-documents]Rent Board Evictions Report 2016-2017
-							a(href="#").data--link #[i.icon-documents]San Francisco Housing Element 2014
+				.st-page--col
+					.st-box.in-grid: .st-data
+						.st-data--title #[i.icon-documents-c]Documents
+						.st-data--links
+							a(href="#").st-data--link #[i.icon-documents]Housing Inventory Report 2015
+							a(href="#").st-data--link #[i.icon-documents]Housing Inventory Report 2014
+							a(href="#").st-data--link #[i.icon-documents]RHNA Progress Report 2015
+							a(href="#").st-data--link #[i.icon-documents]Rent Board Evictions Report 2016-2017
+							a(href="#").st-data--link #[i.icon-documents]San Francisco Housing Element 2014
 
-					.box.in-grid: .data
-						.data--title #[i.icon-links-c]Links
-						.data--links
-							a(href="#").data--link #[i.icon-links]SF Mayor’s Housing Meter
-							a(href="#").data--link #[i.icon-links]Paragon Real Estate Group Housing Analysis
-							a(href="#").data--link #[i.icon-links]SF DBI Permit Search
-							a(href="#").data--link #[i.icon-links]SF MOHCD Affordable Housing Pipeline
+					.st-box.in-grid: .st-data
+						.st-data--title #[i.icon-links-c]Links
+						.st-data--links
+							a(href="#").st-data--link #[i.icon-links]SF Mayor’s Housing Meter
+							a(href="#").st-data--link #[i.icon-links]Paragon Real Estate Group Housing Analysis
+							a(href="#").st-data--link #[i.icon-links]SF DBI Permit Search
+							a(href="#").st-data--link #[i.icon-links]SF MOHCD Affordable Housing Pipeline
 
-					.box.in-grid: .data
-						.data--title #[i.icon-data-needs-c]Data needs
-						.data--links
-							a(href="#").data--link #[i.icon-data-needs]Housing inventory dataset for 2016
-							a(href="#").data--link #[i.icon-data-needs]Issued Certificates of Final Completion (CFCs)
-							a(href="#").data--link #[i.icon-data-needs]Units that lose rent control status
-							a(href="#").data--link #[i.icon-data-needs]Property tax data related to housing production
+					.st-box.in-grid: .st-data
+						.st-data--title #[i.icon-data-needs-c]Data needs
+						.st-data--links
+							a(href="#").st-data--link #[i.icon-data-needs]Housing inventory dataset for 2016
+							a(href="#").st-data--link #[i.icon-data-needs]Issued Certificates of Final Completion (CFCs)
+							a(href="#").st-data--link #[i.icon-data-needs]Units that lose rent control status
+							a(href="#").st-data--link #[i.icon-data-needs]Property tax data related to housing production

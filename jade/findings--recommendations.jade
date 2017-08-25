@@ -4,22 +4,22 @@ doctype html
 html
 	+head ('Statecraft')
 
-	body: .page
+	body: .st-page
 		+page--side
 
-		.page--box
+		.st-page--box
 			+header ('Findings', '', true)
 
-			.page--bg
-			.page--wrap: .box
-				.box--section: +findings-intro
-				.box--section
-					.page--tabs
-						a(href="#").page--tab Key findings
-						a(href="#").page--tab Charts
-						a(href="#").page--tab.is-active Recommendations
+			.st-page--bg
+			.st-page--wrap: .st-box
+				.st-box--section: +findings-intro
+				.st-box--section
+					.st-page--tabs
+						a(href="#").st-page--tab Key findings
+						a(href="#").st-page--tab Charts
+						a(href="#").st-page--tab.is-active Recommendations
 
-					.page--text
+					.st-page--text
 						h2 Audit SF Mayor’s Housing Meter
 						ol
 							li Identify original data source used in producing SF Mayor’s Housing Meter.
@@ -53,8 +53,8 @@ html
 							li Use building permit data and historic completion rates to estimate next year’s housing production.
 							li Include future projections in annual housing inventory reports.
 
-				.box--section: +subscribe
+				.st-box--section: +subscribe
 
-			.page--nav
-				a(href="#").page--nav-i #[i.icon-first-arrow]#[span Key findings]
-				a(href="#").page--nav-i #[i.icon-left-arrow]#[span Charts]
+			.st-page--nav
+				a(href="#").st-page--nav-i #[i.icon-first-arrow]#[span Key findings]
+				a(href="#").st-page--nav-i #[i.icon-left-arrow]#[span Charts]
