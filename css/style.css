@@ -441,40 +441,14 @@ body *:after {
   float: right;
   color: #2f3444;
   text-decoration: none;
-  margin: 5px 0 0;
-  padding: 0 19px 0 0;
+  margin: 5px 20px 0 0;
   font-size: 14px;
   line-height: 24px;
   font-weight: 600;
   display: block;
-  position: relative;
-  top: auto;
-  right: auto;
-  bottom: auto;
-  left: auto;
 }
 .st-header--user:hover {
   color: #4766ff;
-}
-.st-header--user:after {
-  color: #838d9b;
-  content: '\e900';
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 5px;
-  line-height: 24px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: auto;
-  left: auto;
 }
 .st-header--user img {
   overflow: hidden;
