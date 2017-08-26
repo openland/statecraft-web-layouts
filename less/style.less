@@ -302,8 +302,10 @@ body {
 	&--nav {
 		padding: 40px 0 0;
 		text-align: center;
+		z-index: 2;
 
 		.font (0);
+		.position (relative);
 
 		&-i {
 			margin: 0 15px;
@@ -1009,5 +1011,5 @@ body {
 // Fix (inertial scroll)
 html, body { overflow: hidden; }
 .st-page--box { overflow: auto;
-	.max-size (initial, 100vh);
+	.size (auto, 100vh);
 }

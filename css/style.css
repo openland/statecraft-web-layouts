@@ -670,8 +670,14 @@ body *:after {
 .st-page--nav {
   padding: 40px 0 0;
   text-align: center;
+  z-index: 2;
   font-size: 0;
   line-height: 0;
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
 }
 .st-page--nav-i {
   margin: 0 15px;
@@ -1677,6 +1683,6 @@ body {
 }
 .st-page--box {
   overflow: auto;
-  max-width: initial;
-  max-height: 100vh;
+  width: auto;
+  height: 100vh;
 }
