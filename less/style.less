@@ -1044,3 +1044,11 @@ body {
 	.visible-lg { .display (block); }
 	.hidden-lg { .display (none)!important; }
 }
+
+// --------
+
+// Fix (inertial scroll)
+html, body { overflow: hidden; }
+.st-page--box { overflow: auto;
+	.max-size (initial, 100vh);
+}

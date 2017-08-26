@@ -1704,3 +1704,12 @@ body *:after {
     display: none !important;
   }
 }
+html,
+body {
+  overflow: hidden;
+}
+.st-page--box {
+  overflow: auto;
+  max-width: initial;
+  max-height: 100vh;
+}
