@@ -644,8 +644,6 @@ body *:after {
   right: auto;
   bottom: auto;
   left: auto;
-  font-size: 0;
-  line-height: 0;
 }
 @media (max-width: 1239px) {
   .st-page--grid {
@@ -655,12 +653,8 @@ body *:after {
 }
 .st-page--col {
   padding: 0 15px;
-  display: inline-block;
-  vertical-align: top;
   width: 50%;
   height: auto;
-  font-size: 14px;
-  line-height: 20px;
 }
 @media (max-width: 1239px) {
   .st-page--col {
@@ -1683,6 +1677,5 @@ body {
 }
 .st-page--box {
   overflow: auto;
-  width: auto;
   height: 100vh;
 }

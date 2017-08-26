@@ -286,15 +286,12 @@ body {
 
 		.max-size (1200px);
 		.position (relative);
-		.font (0);
 
 		@media @media-md-only { .max-size (initial); }
 	}
 
 	&--col { padding: 0 15px;
-		.display (inline-block);
 		.size (50%);
-		.font (14px, 20px);
 
 		@media @media-md-only { padding: 0 10px; }
 	}
@@ -1010,6 +1007,7 @@ body {
 
 // Fix (inertial scroll)
 html, body { overflow: hidden; }
-.st-page--box { overflow: auto;
-	.size (auto, 100vh);
+.st-page--box {
+	overflow: auto;
+	height: 100vh;
 }

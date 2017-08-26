@@ -15,4 +15,9 @@ $(document).ready(function () {
 		$('.st-side, .st-page--box').toggleClass('is-shown');
 	});
 
+	$('.st-page--masonry').masonry({
+		itemSelector: '.st-page--col'
+		//columnWidth: 200
+	});
+
 });
