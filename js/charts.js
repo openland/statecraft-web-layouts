@@ -3,10 +3,10 @@ $(document).ready(function () {
 	var chartDatas = [{
 			labels: ['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017'],
 			datasets: [
-				{ label: 'Total completed', data: [10, 30, 20, 70, 60, 70, 70, 60, 60], backgroundColor: '#34b5ff', borderColor: '#34b5ff', fill: false, lineTension: 0 },
-				{ label: 'Affordable completed', data: [10, 40, 40, 50, 70, 40, 50, 60, 50], backgroundColor: '#535de8', borderColor: '#535de8', fill: false, lineTension: 0 },
-				{ label: 'Total in-construction', data: [10, 40, 40, 50, 70, 40, 50, 60, 50], backgroundColor: '#ff5c54', borderColor: '#ff5c54', fill: false, lineTension: 0 },
-				{ label: 'Affordable in-construction', data: [60, 50, 10, 30, 80, 50, 40, 30, 70], backgroundColor: '#ffc334', borderColor: '#ffc334', fill: false, lineTension: 0 }
+				{ label: 'Total completed', data: [90, 70, 105, 60, 75, 90, 105, 60], backgroundColor: '#34b5ff', borderColor: '#34b5ff', fill: false, lineTension: 0 },
+				{ label: 'Affordable completed', data: [70, 63, 77, 35, 85, 70, 77, 35], backgroundColor: '#535de8', borderColor: '#535de8', fill: false, lineTension: 0 },
+				{ label: 'Total in-construction', data: [90, 70, 105, 60, 75, 90, 105, 60], backgroundColor: '#ff5c54', borderColor: '#ff5c54', fill: false, lineTension: 0 },
+				{ label: 'Affordable in-construction', data: [70, 63, 77, 35, 85, 70, 77, 35], backgroundColor: '#ffc334', borderColor: '#ffc334', fill: false, lineTension: 0 }
 			]
 		}, {
 			labels: ['Q1 2015', 'Q2 2015', 'Q3 2015', 'Q4 2015', 'Q1 2016', 'Q2 2016', 'Q3 2016', 'Q4 2016'],
@@ -20,8 +20,8 @@ $(document).ready(function () {
 			scales: {
 				yAxes: [{ ticks: { beginAtZero: true } }],
 				xAxes: [{
-					categoryPercentage: 0.6,
-					barPercentage: 0.8,
+					categoryPercentage: 0.85,
+					barPercentage: 0.75,
 					gridLines: { display: false }
 				}]
 			},
@@ -30,6 +30,27 @@ $(document).ready(function () {
 			legend: { display: false },
 			tooltips: { enabled: false },
 			events: [],
+
+			animation: {
+				onComplete: function () {
+					var ctx = this.chart.ctx;
+
+					ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontFamily, 'normal', Chart.defaults.global.defaultFontFamily);
+					ctx.fillStyle = 'grey';
+					ctx.textAlign = 'center';
+					ctx.textBaseline = 'bottom';
+
+					this.data.datasets.forEach(function (dataset) {
+						for (var i = 0; i < dataset.data.length; i++) {
+							for (var key in dataset._meta) {
+								var model = dataset._meta[key].data[i]._model;
+
+								ctx.fillText(dataset.data[i], model.x, model.y - 5);
+							}
+						}
+					});
+				}
+			},
 
 			legendCallback: function (chart) {
 				var legendHtml = [];
