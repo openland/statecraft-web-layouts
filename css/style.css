@@ -424,14 +424,18 @@ body *:after {
   line-height: 30px;
   font-weight: 700;
 }
-.st-header--title a {
-  text-decoration: none;
-  font-weight: 400;
+.st-header--label {
   color: #626677;
   display: inline-block;
   vertical-align: top;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
 }
-.st-header--title a:hover {
+a.st-header--label {
+  text-decoration: none;
+}
+a.st-header--label:hover {
   color: #2f3444;
 }
 .st-header--auth {

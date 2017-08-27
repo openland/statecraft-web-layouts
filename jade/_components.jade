@@ -45,7 +45,7 @@ mixin page--side (item, sub)
 mixin header (title, link, auth)
 	header.st-header&attributes(attributes)
 		if ((link != '') && link)
-			.st-header--title #[a(href="#")= link] / #{title}
+			.st-header--title #[a(href="#").st-header--label= link] / #{title}
 		else
 			.st-header--title= title
 
