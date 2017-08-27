@@ -439,16 +439,10 @@ body *:after {
 }
 .st-header--user {
   float: right;
-  color: #2f3444;
-  text-decoration: none;
   margin: 5px 20px 0 0;
   font-size: 14px;
   line-height: 24px;
   font-weight: 600;
-  display: block;
-}
-.st-header--user:hover {
-  color: #4766ff;
 }
 .st-header--user img {
   overflow: hidden;
@@ -1012,14 +1006,6 @@ body *:after {
 .st-page--text > *:last-child {
   margin-bottom: 0;
 }
-.st-page--fields {
-  margin: -32px 0 -54px;
-}
-@media (max-width: 1239px) {
-  .st-page--fields {
-    margin: -12px 0 -34px;
-  }
-}
 .st-page--field {
   padding: 0 0 0 82px;
   margin: 0 0 13px;
@@ -1092,8 +1078,8 @@ body *:after {
   background: #ffffff;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.02);
-  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.02);
+  -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.2);
 }
 @media (max-width: 1239px) {
   .st-box {
@@ -1122,6 +1108,14 @@ body *:after {
 }
 .st-box--section:last-child {
   border: none;
+}
+.st-box--section.is-fields {
+  padding: 28px 80px 26px;
+}
+@media (max-width: 1239px) {
+  .st-box--section.is-fields {
+    padding: 28px 40px 26px;
+  }
 }
 .st-subscribe {
   margin: -2px 0 -20px;
@@ -1429,8 +1423,15 @@ body *:after {
   -webkit-border-radius: 64px;
   border-radius: 64px;
   margin: 0 auto 16px;
+  -webkit-transition: 200ms all ease;
+  -o-transition: 200ms all ease;
+  transition: 200ms all ease;
+  display: block;
   width: 64px;
   height: 64px;
+}
+.st-side--logo:hover {
+  opacity: 0.7;
 }
 .st-side--logo img {
   display: block;

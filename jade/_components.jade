@@ -19,8 +19,8 @@ mixin head (title)
 mixin page--side (item, sub)
 	.st-side&attributes(attributes)
 		a(href="#").st-side--toggler: i
+		a(href="#").st-side--logo: img(src="http://placehold.it/128" alt="")
 
-		.st-side--logo: img(src="http://placehold.it/128" alt="")
 		.st-side--title San Francisco
 		.st-side--text Housing
 
@@ -53,8 +53,7 @@ mixin header (title, link, auth)
 			.st-header--auth: a(href="#").st-btn.is-sm.is-outline Sign in
 		else
 			.st-header--auth: a(href="#").st-btn.is-sm.is-outline Log out
-
-			a(href="#").st-header--user #[img(src="http://placehold.it/48" alt="")]Yury Lifshits
+			.st-header--user #[img(src="http://placehold.it/48" alt="")]Yury Lifshits
 
 mixin subscribe
 	.st-subscribe&attributes(attributes)

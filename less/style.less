@@ -148,14 +148,10 @@ body {
 	&--auth { float: right; }
 	&--user {
 		float: right;
-		color: @text;
-		text-decoration: none;
 		margin: 5px 20px 0 0;
 
 		.font (14px, 24px, 600);
-		.display (block);
 
-		&:hover { color: @blue-1; }
 		img {
 			overflow: hidden;
 			border-radius: 24px;
@@ -538,10 +534,6 @@ body {
 		> *:last-child { margin-bottom: 0; }
 	}
 
-	&--fields { margin: -32px 0 -54px;
-		@media @media-md-only { margin: -12px 0 -34px; }
-	}
-
 	&--field {
 		padding: 0 0 0 82px;
 		margin: 0 0 13px;
@@ -598,7 +590,7 @@ body {
 .st-box {
 	background: @white;
 	border-radius: 3px;
-	box-shadow: 0 15px 30px 0 fade(@black, 2);
+	box-shadow: 0 15px 30px 0 fade(@black, 20);
 
 	@media @media-md-only { border-radius: 0; }
 
@@ -616,6 +608,9 @@ body {
 		@media @media-md-only { padding: 40px 40px 60px; }
 
 		&:last-child { border: none; }
+		&.is-fields { padding: 28px 80px 26px;
+			@media @media-md-only { padding: 28px 40px 26px; }
+		}
 	}
 }
 
@@ -829,9 +824,12 @@ body {
 		overflow: hidden;
 		border-radius: 64px;
 		margin: 0 auto 16px;
+		transition: 200ms all ease;
 
+		.display (block);
 		.size (64px, 64px);
 
+		&:hover { opacity: 0.7; }
 		img {
 			.display (block);
 			.size (100%);
