@@ -1183,11 +1183,42 @@ body *:after {
 }
 .st-chart {
   padding: 8px 0 25px;
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  min-width: auto;
+  min-height: 200px;
 }
-.st-chart img {
+.st-chart canvas {
   display: block;
-  width: 100%;
+  width: auto;
   height: auto;
+}
+.st-chart--legend {
+  text-align: center;
+  padding: 20px 0 0;
+  font-size: 0;
+  line-height: 0;
+}
+.st-chart--item {
+  margin: 0 20px 10px;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+}
+.st-chart--item span {
+  border: 4px solid;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  margin: 3px 10px 0 0;
+  display: inline-block;
+  vertical-align: top;
+  width: 12px;
+  height: 12px;
 }
 .st-status {
   margin: -10px 0 -7px;

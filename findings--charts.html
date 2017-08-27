@@ -55,13 +55,19 @@
               <div class="st-page--tabs"><a class="st-page--tab" href="#">Key findings</a><a class="st-page--tab is-active" href="#">Charts</a><a class="st-page--tab" href="#">Recommendations</a></div>
               <div class="st-page--text is-charts">
                 <h2>Net new units by quarter</h2>
-                <div class="st-chart"><img src="http://placehold.it/785x351" alt=""></div>
+                <div class="st-chart">
+                  <div class="st-chart--in">
+                    <canvas></canvas>
+                  </div>
+                  <div class="st-chart--legend"></div>
+                </div>
                 <h2>Net new units by year</h2>
-                <div class="st-chart"><img src="http://placehold.it/785x351" alt=""></div>
-                <h2>Development projects by quarter</h2>
-                <div class="st-chart"><img src="http://placehold.it/785x351" alt=""></div>
-                <h2> Development projects with 10+ units by quarter</h2>
-                <div class="st-chart"><img src="http://placehold.it/785x351" alt=""></div>
+                <div class="st-chart">
+                  <div class="st-chart--in">
+                    <canvas></canvas>
+                  </div>
+                  <div class="st-chart--legend"></div>
+                </div>
               </div>
             </div>
             <div class="st-box--section">
@@ -81,5 +87,7 @@
         <div class="st-page--nav"><a class="st-page--nav-i" href="#"><i class="icon-left-arrow"></i><span>Key findings</span></a><a class="st-page--nav-i" href="#"><span>Recommendations</span><i class="icon-right-arrow"></i></a></div>
       </div>
     </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    <script type="text/javascript" src="js/charts.js"></script>
   </body>
 </html>

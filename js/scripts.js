@@ -17,7 +17,6 @@ $(document).ready(function () {
 
 	$('.st-page--masonry').masonry({
 		itemSelector: '.st-page--col'
-		//columnWidth: 200
 	});
 
 });

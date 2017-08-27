@@ -4,36 +4,34 @@ doctype html
 html
 	+head ('Statecraft')
 
-	body: .st-page
-		+page--side (1, 1)
+	body
+		.st-page
+			+page--side (1, 1)
 
-		.st-page--box
-			+header ('Findings', '', true)
-			+page--bg
+			.st-page--box
+				+header ('Findings', '', true)
+				+page--bg
 
-			.st-page--wrap: .st-box
-				.st-box--section: +findings-intro
-				.st-box--section
-					.st-page--tabs
-						a(href="#").st-page--tab Key findings
-						a(href="#").st-page--tab.is-active Charts
-						a(href="#").st-page--tab Recommendations
+				.st-page--wrap: .st-box
+					.st-box--section: +findings-intro
+					.st-box--section
+						.st-page--tabs
+							a(href="#").st-page--tab Key findings
+							a(href="#").st-page--tab.is-active Charts
+							a(href="#").st-page--tab Recommendations
 
-					.st-page--text.is-charts
-						h2 Net new units by quarter
-						.st-chart: img(src="http://placehold.it/785x351" alt="")
+						.st-page--text.is-charts
+							h2 Net new units by quarter
+							+chart
 
-						h2 Net new units by year
-						.st-chart: img(src="http://placehold.it/785x351" alt="")
+							h2 Net new units by year
+							+chart
 
-						h2 Development projects by quarter
-						.st-chart: img(src="http://placehold.it/785x351" alt="")
+					.st-box--section: +subscribe
 
-						h2  Development projects with 10+ units by quarter
-						.st-chart: img(src="http://placehold.it/785x351" alt="")
+				.st-page--nav
+					a(href="#").st-page--nav-i #[i.icon-left-arrow]#[span Key findings]
+					a(href="#").st-page--nav-i #[span Recommendations]#[i.icon-right-arrow]
 
-				.st-box--section: +subscribe
-
-			.st-page--nav
-				a(href="#").st-page--nav-i #[i.icon-left-arrow]#[span Key findings]
-				a(href="#").st-page--nav-i #[span Recommendations]#[i.icon-right-arrow]
+		script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js")
+		script(type="text/javascript" src="js/charts.js")
