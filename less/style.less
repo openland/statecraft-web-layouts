@@ -923,6 +923,7 @@ body {
 		}
 	}
 
+	&--item.is-expanded &--sub { .display (block); }
 	&--powered {
 		text-align: center;
 		text-decoration: none;
@@ -970,7 +971,7 @@ body {
 				}
 			}
 
-			&--item.is-active .st-side--sub { .display (none); }
+			&--sub { .display (none)!important; }
 			&--powered { padding: 36px 0 14px;
 				&:before {
 					text-align: center;

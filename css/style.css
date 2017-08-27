@@ -1539,6 +1539,9 @@ body *:after {
   background: none;
   color: #4766ff;
 }
+.st-side--item.is-expanded .st-side--sub {
+  display: block;
+}
 .st-side--powered {
   text-align: center;
   text-decoration: none;
@@ -1613,8 +1616,8 @@ body *:after {
     width: 86px;
     height: auto;
   }
-  .st-side:not(.is-shown) .st-side--item.is-active .st-side--sub {
-    display: none;
+  .st-side:not(.is-shown) .st-side--sub {
+    display: none !important;
   }
   .st-side:not(.is-shown) .st-side--powered {
     padding: 36px 0 14px;
