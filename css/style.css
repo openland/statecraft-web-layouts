@@ -886,10 +886,22 @@ body *:after {
     margin: 0 0 -27px;
   }
 }
+.st-page--text h1 {
+  margin: 47px 0 16px;
+  font-size: 26px;
+  line-height: 32px;
+  font-weight: 800;
+}
 .st-page--text h2 {
   margin: 47px 0 16px;
   font-size: 20px;
   line-height: 28px;
+  font-weight: 800;
+}
+.st-page--text h3 {
+  margin: 47px 0 16px;
+  font-size: 18px;
+  line-height: 26px;
   font-weight: 800;
 }
 .st-page--text p {
