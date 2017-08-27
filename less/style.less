@@ -592,6 +592,8 @@ body {
 	border-radius: 3px;
 	box-shadow: 0 15px 30px 0 fade(@black, 20);
 
+	.position (relative);
+
 	@media @media-md-only { border-radius: 0; }
 
 	&.in-grid {
@@ -599,6 +601,10 @@ body {
 		border-radius: 3px;
 
 		@media @media-md-only { margin: 0 0 20px; }
+	}
+
+	&.is-loading {
+		.min-size (initial, 200px);
 	}
 
 	&--section {
@@ -984,6 +990,70 @@ body {
 		}
 
 		&.is-shown { .size (238px); }
+	}
+}
+
+// --------
+
+.st-loader {
+	background: @white;
+	z-index: 9999;
+	overflow: hidden;
+
+	.position (absolute, 0, 0, 0, 0);
+
+	&--svg {
+		margin: auto;
+		animation: rotate 2s linear infinite;
+		transform-origin: center center;
+		transform: translate(-50%, -50%);
+
+		.position-tl (absolute, 50%, 50%);
+		.max-size (130px, 130px);
+		.size (60%, 60%);
+	}
+
+	&--circle {
+		stroke-dasharray: 1, 200;
+		stroke-dashoffset: 0;
+		animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+		stroke-linecap: round;
+	}
+}
+
+@keyframes rotate {
+	100% {
+		transform: translate(-50%, -50%) rotate(360deg);
+	}
+}
+
+@keyframes dash {
+	0% {
+		stroke-dasharray: 1, 200;
+		stroke-dashoffset: 0;
+	}
+	50% {
+		stroke-dasharray: 89, 200;
+		stroke-dashoffset: -35px;
+	}
+	100% {
+		stroke-dasharray: 89, 200;
+		stroke-dashoffset: -124px;
+	}
+}
+
+@keyframes color {
+	100%, 0% {
+		stroke: #d62d20;
+	}
+	40% {
+		stroke: #0057e7;
+	}
+	66% {
+		stroke: #008744;
+	}
+	80%, 90% {
+		stroke: #ffa700;
 	}
 }
 

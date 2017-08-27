@@ -9,6 +9,7 @@ html
 
 		.st-page--box
 			+header ('Data sources').without-shadow
+				+loader
 
 			.st-navigation
 				ul.st-navigation--list
@@ -63,14 +64,28 @@ html
 						.st-data--label Building permits
 						.st-data--links: a(href="#").st-data--link #[i.icon-documents]San Francisco Bay Area Progress in Meeting 2015-2023 Regional Housing Need Allocation (RHNA)
 
-				.st-page--col: .st-box.in-grid: .st-data
-					.st-data--title #[i.icon-documents-c]Documents
-					.st-data--links
-						a(href="#").st-data--link #[i.icon-documents]Housing Inventory Report 2015
-						a(href="#").st-data--link #[i.icon-documents]Housing Inventory Report 2014
-						a(href="#").st-data--link #[i.icon-documents]RHNA Progress Report 2015
-						a(href="#").st-data--link #[i.icon-documents]Rent Board Evictions Report 2016-2017
-						a(href="#").st-data--link #[i.icon-documents]San Francisco Housing Element 2014
+				.st-page--col: .st-box.in-grid.is-loading: +loader
+				.st-page--col: .st-box.in-grid.is-loading
+					.st-data
+						.st-data--title #[i.icon-documents-c]Documents
+						.st-data--links
+							a(href="#").st-data--link #[i.icon-documents]Housing Inventory Report 2015
+							a(href="#").st-data--link #[i.icon-documents]Housing Inventory Report 2014
+							a(href="#").st-data--link #[i.icon-documents]RHNA Progress Report 2015
+							a(href="#").st-data--link #[i.icon-documents]Rent Board Evictions Report 2016-2017
+							a(href="#").st-data--link #[i.icon-documents]San Francisco Housing Element 2014
+
+					+loader
+
+				.st-page--col: .st-box.in-grid
+					.st-data
+						.st-data--title #[i.icon-documents-c]Documents
+						.st-data--links
+							a(href="#").st-data--link #[i.icon-documents]Housing Inventory Report 2015
+							a(href="#").st-data--link #[i.icon-documents]Housing Inventory Report 2014
+							a(href="#").st-data--link #[i.icon-documents]RHNA Progress Report 2015
+							a(href="#").st-data--link #[i.icon-documents]Rent Board Evictions Report 2016-2017
+							a(href="#").st-data--link #[i.icon-documents]San Francisco Housing Element 2014
 
 				.st-page--col: .st-box.in-grid: .st-data
 					.st-data--title #[i.icon-links-c]Links

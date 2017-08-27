@@ -55,6 +55,8 @@ mixin header (title, link, auth)
 			.st-header--auth: a(href="#").st-btn.is-sm.is-outline Log out
 			.st-header--user #[img(src="http://placehold.it/48" alt="")]Yury Lifshits
 
+		block
+
 mixin subscribe
 	.st-subscribe&attributes(attributes)
 		.st-subscribe--title Housing insights from Statecraft
@@ -85,3 +87,7 @@ mixin findings-intro
 		p This study can be used for double-checking housing inventory reports for 2014 and 2015, and provides a new estimate for 2016 and Q1 2017 housing completions (where housing inventory report is still unpublished).
 
 	+page--tools
+
+mixin loader
+	.st-loader&attributes(attributes): svg(viewBox="25 25 50 50").st-loader--svg
+		circle(cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10").st-loader--circle
