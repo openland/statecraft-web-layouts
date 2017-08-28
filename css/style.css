@@ -1733,7 +1733,7 @@ a.st-header--label:hover {
   }
 }
 .st-loader {
-  background: #ffffff;
+  background: #f2f5f8;
   z-index: 9999;
   overflow: hidden;
   position: absolute;
@@ -1775,6 +1775,10 @@ a.st-header--label:hover {
   -webkit-animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
   animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
   stroke-linecap: round;
+}
+.st-box .st-loader,
+.st-header .st-loader {
+  background: #ffffff;
 }
 @-webkit-keyframes rotate {
   100% {
