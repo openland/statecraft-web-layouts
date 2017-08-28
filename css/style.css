@@ -10,6 +10,13 @@
   bottom: 0;
   left: 0;
 }
+.st-loader.is-fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
 .st-loader--svg {
   margin: auto;
   -webkit-animation: rotate 2s linear infinite;
