@@ -1337,10 +1337,18 @@ a.st-header--label:hover {
   line-height: 0;
 }
 .st-data--link {
+  margin: 0 0 27px;
+  padding: 0 25px 0 0;
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+}
+.st-data--link-i {
   padding: 0 0 0 25px;
   text-decoration: none;
   color: #2f3444;
-  margin: 0 0 27px;
   display: block;
   position: relative;
   top: auto;
@@ -1351,10 +1359,10 @@ a.st-header--label:hover {
   line-height: 24px;
   font-weight: 600;
 }
-.st-data--link:hover {
+.st-data--link-i:hover {
   color: #4766ff;
 }
-.st-data--link i {
+.st-data--link-i i {
   color: #acb7c7;
   display: block;
   position: absolute;
@@ -1364,6 +1372,27 @@ a.st-header--label:hover {
   left: 0;
   font-size: 14px;
   line-height: 24px;
+}
+.st-data--link-e {
+  color: #acb7c7;
+  text-decoration: none;
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  left: auto;
+}
+.st-data--link-e:hover {
+  color: #2f3444;
+}
+.st-data--link-e i {
+  display: block;
+  font-size: 16px;
+  line-height: 24px;
+}
+.st-data--link:hover .st-data--link-e {
+  display: block;
 }
 .st-data--grid .st-data--link {
   margin-right: 7px;

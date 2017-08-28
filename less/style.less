@@ -780,21 +780,43 @@ body {
 	&--links { margin: 0 0 -12px; }
 	&--grid { .font (0); }
 	&--link {
-		padding: 0 0 0 25px;
-		text-decoration: none;
-		color: @text;
 		margin: 0 0 27px;
+		padding: 0 25px 0 0;
 
-		.display (block);
 		.position (relative);
-		.font (16px, 24px, 600);
 
-		&:hover { color: @blue-1; }
-		i { color: @grey-8;
+		&-i {
+			padding: 0 0 0 25px;
+			text-decoration: none;
+			color: @text;
+
 			.display (block);
-			.position-tl (absolute, 0, 0);
-			.font (14px, 24px);
+			.position (relative);
+			.font (16px, 24px, 600);
+
+			&:hover { color: @blue-1; }
+			i { color: @grey-8;
+				.display (block);
+				.position-tl (absolute, 0, 0);
+				.font (14px, 24px);
+			}
 		}
+
+		&-e {
+			color: @grey-8;
+			text-decoration: none;
+
+			.display (none);
+			.position (absolute, 0, 0);
+
+			&:hover { color: @text; }
+			i {
+				.display (block);
+				.font (16px, 24px);
+			}
+		}
+
+		&:hover &-e { .display (block); }
 	}
 
 	&--grid &--link { margin-right: 7px;
