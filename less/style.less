@@ -779,10 +779,7 @@ body {
 
 	&--links { margin: 0 0 -12px; }
 	&--grid { .font (0); }
-	&--link {
-		margin: 0 0 27px;
-		padding: 0 25px 0 0;
-
+	&--link { margin: 0 0 27px;
 		.position (relative);
 
 		&-i {
@@ -805,11 +802,23 @@ body {
 		&-e {
 			color: @grey-8;
 			text-decoration: none;
+			background: @white;
+			text-align: right;
 
 			.display (none);
-			.position (absolute, 0, 0);
+			.position (absolute, 0, 0, 0);
+			.size (25px);
 
 			&:hover { color: @text; }
+			&:before {
+				content: "";
+				background-image: linear-gradient(to right, fade(@white, 0) 0%, @white 100%);
+
+				.display (block);
+				.size (20px);
+				.position (absolute, 0, 100%, 0);
+			}
+
 			i {
 				.display (block);
 				.font (16px, 24px);
