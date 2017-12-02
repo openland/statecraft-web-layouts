@@ -1,0 +1,53 @@
+include ./_components.jade
+
+doctype html
+html
+	+sf-head ('Statecraft', 1054)
+
+	body: .sf-page
+		.sf-intro: .container
+			.sf-header
+				a(href="#").sf-header--logo: img(src="img/logotype.svg" alt="")
+
+				ul.sf-header--nav
+					li.sf-header--item: a(href="#") Sign In
+					li.sf-header--item.is-join: a(href="#") Join
+
+			.sf-intro--in
+				.sf-intro--title San Francisco Housing Forecast 2017-18
+
+				+sf-intro--tools
+
+		.sf-counters: .container: .row
+			.col-lg-3: +sf-counter ('415', 'Projects tracked', '72 verified')
+			.col-lg-3: +sf-counter ('2753', '2017 net new units', '1115 verified')
+			.col-lg-3: +sf-counter ('3153', '2018 net new units', '342 verified')
+			.col-lg-3: +sf-counter ('5000', 'Mayor\'s goal', 'Annual target')
+
+		+sf-insights ('Insights', [['Accuracy', 'City doesn’t have accurate info for expected completion. Collaboration with developer community is necessary.'], ['Below target', 'Judging from the current data, the city is well behind mayor’s goal. However, major changes are possible after new inputs from developers.'], ['Affordable', 'Similar collaborative pipeline review is required to develop accurate projections for affordable production.']])
+
+		.sf-pipeline: .container: .row
+			.col-lg-4
+				.sf-pipeline--title Pipeline
+				.sf-pipeline--text List of development projects likely to be completed in 2017-2018.
+				.sf-pipeline--btn: a(href="#").sf-btn.is-block Explore the pipeline
+
+			.col-lg-8: .sf-pipeline--list: img(src="img/sf-pipeline--list.png" alt="")
+
+		.sf-form: .container
+			.sf-form--title Make this forecast more accurate
+			.sf-form--text Join our community to correct, expand, or add records to the pipeline
+
+			form(method="POST" action="").sf-form--in
+				.sf-form--field: input(type="text" placeholder="Full name").sf-input
+				.sf-form--field: input(type="text" placeholder="Email").sf-input
+				.sf-form--field: input(type="text" placeholder="Organization").sf-input
+				.sf-form--btn: button(type="submit").sf-btn.is-block Join as a contributor
+
+		+sf-insights ('About SF Housing Forecast', [['Objective', 'Create the most accurate and transparent forecast for housing production in the city.'], ['Team', 'This project is an initiative of Statecraft, a San-Francisco-based government analytics company.'], ['Data', 'The initial list of construction projects is created using open data published by DataSF (development pipeline and building permits). Further details are sources from our community of contributors.']]).with-bg
+
+		.sf-footer: .container
+			.sf-footer--title San Francisco Housing Forecast 2017-18
+			.sf-footer--powered Powered by Statecraft
+
+			+sf-intro--tools

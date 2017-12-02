@@ -1,0 +1,83 @@
+include ./_components.jade
+
+doctype html
+html
+	+sf-head ('Statecraft', 1246)
+
+	body.is-pipeline: .sf-page
+		.sf-top: .container.clearfix
+			a(href="#").sf-top--label San Francisco Housing Forecast
+
+			.sf-top--tabs
+				a(href="#").sf-top--tab.is-active Dashboard
+				a(href="#").sf-top--tab Pipeline Explorer
+
+			ul.sf-top--nav
+				li.sf-top--item: a(href="#") #[img(src="http://placehold.it/28")]Yury Lifshits
+				li.sf-top--item: a(href="#") Sign In
+				li.sf-top--item.is-join: a(href="#") Join
+
+		.sf-notify Record saved#[i.icon-close]
+
+		.sf-in: .container: .row
+			.col-lg-3
+				.sf-in--title Pipeline filters
+
+				.sf-search: form(method="POST" action="").sf-search--box
+					input(type="text" placeholder="Search").sf-search--input
+					button(type="submit").sf-search--button: i.icon-search
+
+				.sf-filter
+					.sf-filter--title Expected completion
+
+					label.sf-filter--radio
+						input(type="radio" name="ec" value="1" checked)
+						span All
+
+					label.sf-filter--radio
+						input(type="radio" name="ec" value="2")
+						span 2017
+
+					label.sf-filter--radio
+						input(type="radio" name="ec" value="3")
+						span 2018
+
+					label.sf-filter--radio
+						input(type="radio" name="ec" value="4")
+						span 2019+
+
+				.sf-filter
+					.sf-filter--title Project size
+
+					label.sf-filter--radio
+						input(type="radio" name="ps" value="1" checked)
+						span All
+
+					label.sf-filter--radio
+						input(type="radio" name="ps" value="2")
+						span 10+ units
+
+				.sf-join
+					.sf-join--btn: a(href="#").sf-btn.is-block Join as a contributer
+					.sf-join--btn: a(href="#").sf-btn.is-outline.is-block Add a project
+
+			.col-lg-9
+				.sf-in--title Buildings
+				.sf-in--list
+					.sf-in--item: +sf-card (true).is-checked
+					.sf-in--item: +sf-card (false, true).is-checked
+					.sf-in--item: +sf-card
+					.sf-in--item: +sf-card (true).is-checked
+					.sf-in--item: +sf-card (true, true).is-checked
+					.sf-in--item: +sf-card
+					.sf-in--item: +sf-card.is-checked
+
+				.sf-pagi: ul.sf-pagi--list
+					li.sf-pagi--prev: a(href="#") Prev page
+
+					li.sf-pagi--item: span 1
+					li.sf-pagi--item: a(href="#") 2
+					li.sf-pagi--more . . .
+					li.sf-pagi--item: a(href="#") 83
+
+					li.sf-pagi--next: a(href="#") Next page
