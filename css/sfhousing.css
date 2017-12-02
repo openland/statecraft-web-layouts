@@ -1026,6 +1026,16 @@ button {
 .sf-header--item a:hover {
   color: rgba(255, 255, 255, 0.6);
 }
+.sf-header--item a img {
+  overflow: hidden;
+  -webkit-border-radius: 28px;
+  border-radius: 28px;
+  margin: -4px 12px -4px 0;
+  display: inline-block;
+  vertical-align: top;
+  width: 28px;
+  height: 28px;
+}
 .sf-header--item.is-join a {
   border-color: rgba(255, 255, 255, 0.3);
   background: #192743;
