@@ -1096,6 +1096,8 @@ body {
 	font: normal normal 14px/20px 'Aktiv Grotesk Corp', arial, sans-serif;
 	background: #F5F6F8;
 	color: @side;
+
+	input, textarea, button { font-family: 'Aktiv Grotesk Corp', arial, sans-serif; }
 }
 
 .x-container {
@@ -1182,7 +1184,7 @@ body {
 	}
 
 	&--item { float: left;
-		a {
+		a, button {
 			text-decoration: none;
 			color: @white;
 			border: 1px solid transparent;
@@ -1204,9 +1206,11 @@ body {
 			}
 		}
 
-		&.is-join a {
-			border-color: fade(@white, 30);
-			background: #192743;
+		&.is-join {
+			a, button {
+				border-color: fade(@white, 30);
+				background: #192743;
+			}
 		}
 	}
 }
@@ -1465,7 +1469,7 @@ body {
 	}
 
 	&--item { float: left;
-		a {
+		a, button {
 			text-decoration: none;
 			color: @white;
 			border: 1px solid transparent;
@@ -1487,9 +1491,11 @@ body {
 			}
 		}
 
-		&.is-join a {
-			border-color: fade(@white, 30);
-			background: #192743;
+		&.is-join  {
+			a, button {
+				border-color: fade(@white, 30);
+				background: #192743;
+			}
 		}
 	}
 }
