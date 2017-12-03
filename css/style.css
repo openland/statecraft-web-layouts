@@ -3962,6 +3962,9 @@ a.st-header--label:hover {
 .x-card.without-photo .x-card--counter span {
   margin: 0 0 6px;
 }
+.x-card.without-photo .x-card--details {
+  margin: 0;
+}
 .x-card.is-checked .x-card--title:after {
   background: #FAA61F;
   color: #ffffff;
