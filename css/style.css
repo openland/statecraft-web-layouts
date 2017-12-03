@@ -3351,12 +3351,6 @@ a.st-header--label:hover {
 .x-top {
   background: #182642;
   padding: 13px 0;
-  z-index: 100;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: auto;
-  left: 0;
 }
 .x-top--label {
   float: left;
@@ -3452,7 +3446,7 @@ a.st-header--label:hover {
   letter-spacing: 0.6px;
   padding: 5px 0 7px;
   cursor: pointer;
-  position: fixed;
+  position: absolute;
   top: 64px;
   right: 0;
   bottom: auto;
@@ -3469,7 +3463,7 @@ a.st-header--label:hover {
   line-height: 20px;
 }
 .x-in {
-  padding: 113px 0 0;
+  padding: 49px 0 0;
 }
 .x-in--title {
   margin: 0 0 11px;

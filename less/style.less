@@ -1422,9 +1422,6 @@ body {
 .x-top {
 	background: @side;
 	padding: 13px 0;
-	z-index: 100;
-
-	.position (fixed, 0, 0, auto, 0);
 
 	&--label {
 		float: left;
@@ -1507,7 +1504,7 @@ body {
 	padding: 5px 0 7px;
 	cursor: pointer;
 
-	.position (fixed, 64px, 0, auto, 0);
+	.position (absolute, 64px, 0, auto, 0);
 	.font (11px, 20px, 500);
 
 	i { margin: 1px 0 -1px 8px;
@@ -1516,7 +1513,7 @@ body {
 	}
 }
 
-.x-in { padding: 113px 0 0;
+.x-in { padding: 49px 0 0;
 	&--title { margin: 0 0 11px;
 		.font (18px, 20px, 500);
 	}
