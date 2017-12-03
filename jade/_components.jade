@@ -3,7 +3,7 @@ mixin head (title)
 		meta(charset="utf-8")
 		title= title
 
-		meta(name="viewport" content="width=900")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no")
 		meta(name="format-detection" content="telephone=no")
 
 		link(rel="stylesheet" type="text/css" href="css/style.css")
@@ -13,22 +13,6 @@ mixin head (title)
 		script(type="text/javascript" src="js/masonry.pkgd.min.js")
 
 		script(type="text/javascript" src="js/scripts.js")
-
-		block
-
-mixin sf-head (title, width)
-	head
-		meta(charset="utf-8")
-		title= title
-
-		meta(name="viewport" content='width=' + width)
-		meta(name="format-detection" content="telephone=no")
-
-		link(rel="stylesheet" type="text/css" href="css/sfhousing.css")
-
-		script(type="text/javascript" src="js/jquery-1.11.1.min.js")
-
-		script(type="text/javascript" src="js/sfhousing.js")
 
 		block
 
@@ -113,78 +97,78 @@ mixin chart
 		.st-chart--in: canvas
 		.st-chart--legend
 
-mixin sf-intro--tools
-	.sf-intro--tools&attributes(attributes)
-		form(method="POST" action="").sf-intro--form
-			input(type="text" placeholder="Email").sf-intro--input
-			button(type="submit").sf-intro--button Subscribe to updates
+mixin x-intro--tools
+	.x-intro--tools&attributes(attributes)
+		form(method="POST" action="").x-intro--form
+			input(type="text" placeholder="Email").x-intro--input
+			button(type="submit").x-intro--button Subscribe to updates
 
-		.sf-intro--socials
-			.sf-intro--label Share
+		.x-intro--socials
+			.x-intro--label Share
 
-			a(href="#").sf-intro--social: i.icon-fb
-			a(href="#").sf-intro--social: i.icon-tw
+			a(href="#").x-intro--social: i.icon-fb
+			a(href="#").x-intro--social: i.icon-tw
 
-mixin sf-counter (c, n, l)
-	.sf-counter&attributes(attributes)
-		.sf-counter--in
-			.sf-counter--count= c
-			.sf-counter--name= n
+mixin x-counter (c, n, l)
+	.x-counter&attributes(attributes)
+		.x-counter--in
+			.x-counter--count= c
+			.x-counter--name= n
 
-		.sf-counter--label= l
+		.x-counter--label= l
 
-mixin sf-insights (t, i)
-	.sf-insights&attributes(attributes): .container: .row
-		.col-lg-3: .sf-insights--title= t
+mixin x-insights (t, i)
+	.x-insights&attributes(attributes): .x-container: .row
+		.col-lg-3: .x-insights--title= t
 		.col-lg-9
 			each item in i
-				.sf-insights--item
-					.sf-insights--label= item[0]
-					.sf-insights--text= item[1]
+				.x-insights--item
+					.x-insights--label= item[0]
+					.x-insights--text= item[1]
 
-mixin sf-card (hidePhoto, hideText)
-	.sf-card(class=(hidePhoto) ? 'without-photo' : '')&attributes(attributes)
+mixin x-card (hidePhoto, hideText)
+	.x-card(class=(hidePhoto) ? 'without-photo' : '')&attributes(attributes)
 		if (hidePhoto)
-			.sf-card--info
-				.sf-card--in: .sf-card--box
-					.sf-card--title Trinity Plaza Phase 4
+			.x-card--info
+				.x-card--in: .x-card--box
+					.x-card--title Trinity Plaza Phase 4
 
 					if (!hideText)
-						.sf-card--text 150 van ness ave
+						.x-card--text 150 van ness ave
 
-				.sf-card--counter #[span 117]Net new units
-				.sf-card--counter #[span 2017]Expected completion
+				.x-card--counter #[span 117]Net new units
+				.x-card--counter #[span 2017]Expected completion
 
-				a(href="#").sf-card--toggler(data-label="Hide details") Show details
+				a(href="#").x-card--toggler(data-label="Hide details") Show details
 
-				.sf-card--btns
-					a(href="#").sf-card--btn: i.icon-share
-					a(href="#").sf-card--btn: i.icon-edit
+				.x-card--btns
+					a(href="#").x-card--btn: i.icon-share
+					a(href="#").x-card--btn: i.icon-edit
 		else
-			.sf-card--photo(style="background-image: url(http://placehold.it/244x164)")
-			.sf-card--info
-				.sf-card--box
-					.sf-card--title Trinity Plaza Phase 4
+			.x-card--photo(style="background-image: url(http://placehold.it/244x164)")
+			.x-card--info
+				.x-card--box
+					.x-card--title Trinity Plaza Phase 4
 
 					if (!hideText)
-						.sf-card--text 150 van ness ave
+						.x-card--text 150 van ness ave
 
-				.sf-card--btns
-					a(href="#").sf-card--btn: i.icon-share
-					a(href="#").sf-card--btn: i.icon-edit
+				.x-card--btns
+					a(href="#").x-card--btn: i.icon-share
+					a(href="#").x-card--btn: i.icon-edit
 
-			.sf-card--tools
-				.sf-card--counter #[span 117]Net new units
-				.sf-card--counter #[span 2017]Expected completion
+			.x-card--tools
+				.x-card--counter #[span 117]Net new units
+				.x-card--counter #[span 2017]Expected completion
 
-				a(href="#").sf-card--toggler(data-label="Hide details") Show details
+				a(href="#").x-card--toggler(data-label="Hide details") Show details
 
-		.sf-card--details
-			.sf-card--map: .sf-card--map-in
-			.sf-card--fields
-				.sf-card--field #[span Permit ID]N201603172392
-				.sf-card--field #[span Net new affordable units]15
-				.sf-card--field #[span Permit issued]2015
-				.sf-card--field #[span Total affordable units]15
-				.sf-card--field #[span Developer]Shorenstein Properties
-				.sf-card--field #[span Total units]650
+		.x-card--details
+			.x-card--map: .x-card--map-in
+			.x-card--fields
+				.x-card--field #[span Permit ID]N201603172392
+				.x-card--field #[span Net new affordable units]15
+				.x-card--field #[span Permit issued]2015
+				.x-card--field #[span Total affordable units]15
+				.x-card--field #[span Developer]Shorenstein Properties
+				.x-card--field #[span Total units]650

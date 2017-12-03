@@ -1,0 +1,83 @@
+include ./_components.jade
+
+doctype html
+html
+	+head ('Statecraft')
+
+	body: .x-page
+		.x-top: .x-container.is-wide.clearfix
+			a(href="#").x-top--label San Francisco Housing Forecast
+
+			.x-top--tabs
+				a(href="#").x-top--tab.is-active Dashboard
+				a(href="#").x-top--tab Pipeline Explorer
+
+			ul.x-top--nav
+				li.x-top--item: a(href="#") #[img(src="http://placehold.it/28")]Yury Lifshits
+				li.x-top--item: a(href="#") Sign In
+				li.x-top--item.is-join: a(href="#") Join
+
+		.x-notify Record saved#[i.icon-close]
+
+		.x-in: .x-container.is-wide: .row
+			.col-lg-3
+				.x-in--title Pipeline filters
+
+				.x-search: form(method="POST" action="").x-search--box
+					input(type="text" placeholder="Search").x-search--input
+					button(type="submit").x-search--button: i.icon-search
+
+				.x-filter
+					.x-filter--title Expected completion
+
+					label.x-filter--radio
+						input(type="radio" name="ec" value="1" checked)
+						span All
+
+					label.x-filter--radio
+						input(type="radio" name="ec" value="2")
+						span 2017
+
+					label.x-filter--radio
+						input(type="radio" name="ec" value="3")
+						span 2018
+
+					label.x-filter--radio
+						input(type="radio" name="ec" value="4")
+						span 2019+
+
+				.x-filter
+					.x-filter--title Project size
+
+					label.x-filter--radio
+						input(type="radio" name="ps" value="1" checked)
+						span All
+
+					label.x-filter--radio
+						input(type="radio" name="ps" value="2")
+						span 10+ units
+
+				.x-join
+					.x-join--btn: a(href="#").x-btn.is-block Join as a contributer
+					.x-join--btn: a(href="#").x-btn.is-outline.is-block Add a project
+
+			.col-lg-9
+				.x-in--title Buildings
+				.x-in--list
+					.x-in--item: +x-card (true).is-checked
+					.x-in--item: +x-card (false, true).is-checked
+					.x-in--item: +x-card
+					.x-in--item: +x-card (true).is-checked
+					.x-in--item: +x-card (true, true).is-checked
+					.x-in--item: +x-card
+					.x-in--item: +x-card.is-checked
+
+				.x-pagi: ul.x-pagi--list
+					li.x-pagi--prev: a(href="#") Prev page
+
+					li.x-pagi--item: span 1
+					li.x-pagi--item: a(href="#") 2
+					li.x-pagi--more . . .
+					li.x-pagi--item: a(href="#") 83
+
+					li.x-pagi--next: a(href="#") Next page

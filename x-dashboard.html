@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Statecraft</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+  </head>
+  <body>
+    <div class="x-page">
+      <div class="x-top">
+        <div class="x-container is-wide clearfix"><a class="x-top--label" href="#">San Francisco Housing Forecast</a>
+          <div class="x-top--tabs"><a class="x-top--tab is-active" href="#">Dashboard</a><a class="x-top--tab" href="#">Pipeline Explorer</a></div>
+          <ul class="x-top--nav">
+            <li class="x-top--item"><a href="#"><img src="http://placehold.it/28">Yury Lifshits</a></li>
+            <li class="x-top--item"><a href="#">Sign In</a></li>
+            <li class="x-top--item is-join"><a href="#">Join</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="x-notify">Record saved<i class="icon-close"></i></div>
+      <div class="x-in">
+        <div class="x-container is-wide">
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="x-in--title">Pipeline filters</div>
+              <div class="x-search">
+                <form class="x-search--box" method="POST" action="">
+                  <input class="x-search--input" type="text" placeholder="Search">
+                  <button class="x-search--button" type="submit"><i class="icon-search"></i></button>
+                </form>
+              </div>
+              <div class="x-filter">
+                <div class="x-filter--title">Expected completion</div>
+                <label class="x-filter--radio">
+                  <input type="radio" name="ec" value="1" checked><span>All</span>
+                </label>
+                <label class="x-filter--radio">
+                  <input type="radio" name="ec" value="2"><span>2017</span>
+                </label>
+                <label class="x-filter--radio">
+                  <input type="radio" name="ec" value="3"><span>2018</span>
+                </label>
+                <label class="x-filter--radio">
+                  <input type="radio" name="ec" value="4"><span>2019+</span>
+                </label>
+              </div>
+              <div class="x-filter">
+                <div class="x-filter--title">Project size</div>
+                <label class="x-filter--radio">
+                  <input type="radio" name="ps" value="1" checked><span>All</span>
+                </label>
+                <label class="x-filter--radio">
+                  <input type="radio" name="ps" value="2"><span>10+ units</span>
+                </label>
+              </div>
+              <div class="x-join">
+                <div class="x-join--btn"><a class="x-btn is-block" href="#">Join as a contributer</a></div>
+                <div class="x-join--btn"><a class="x-btn is-outline is-block" href="#">Add a project</a></div>
+              </div>
+            </div>
+            <div class="col-lg-9">
+              <div class="x-in--title">Buildings</div>
+              <div class="x-in--list">
+                <div class="x-in--item">
+                  <div class="x-card without-photo is-checked">
+                    <div class="x-card--info">
+                      <div class="x-card--in">
+                        <div class="x-card--box">
+                          <div class="x-card--title">Trinity Plaza Phase 4</div>
+                          <div class="x-card--text">150 van ness ave</div>
+                        </div>
+                      </div>
+                      <div class="x-card--counter"><span>117</span>Net new units</div>
+                      <div class="x-card--counter"><span>2017</span>Expected completion</div><a class="x-card--toggler" href="#" data-label="Hide details">Show details</a>
+                      <div class="x-card--btns"><a class="x-card--btn" href="#"><i class="icon-share"></i></a><a class="x-card--btn" href="#"><i class="icon-edit"></i></a></div>
+                    </div>
+                    <div class="x-card--details">
+                      <div class="x-card--map">
+                        <div class="x-card--map-in"></div>
+                      </div>
+                      <div class="x-card--fields">
+                        <div class="x-card--field"><span>Permit ID</span>N201603172392</div>
+                        <div class="x-card--field"><span>Net new affordable units</span>15</div>
+                        <div class="x-card--field"><span>Permit issued</span>2015</div>
+                        <div class="x-card--field"><span>Total affordable units</span>15</div>
+                        <div class="x-card--field"><span>Developer</span>Shorenstein Properties</div>
+                        <div class="x-card--field"><span>Total units</span>650</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="x-in--item">
+                  <div class="x-card is-checked">
+                    <div class="x-card--photo" style="background-image: url(http://placehold.it/244x164);"></div>
+                    <div class="x-card--info">
+                      <div class="x-card--box">
+                        <div class="x-card--title">Trinity Plaza Phase 4</div>
+                      </div>
+                      <div class="x-card--btns"><a class="x-card--btn" href="#"><i class="icon-share"></i></a><a class="x-card--btn" href="#"><i class="icon-edit"></i></a></div>
+                    </div>
+                    <div class="x-card--tools">
+                      <div class="x-card--counter"><span>117</span>Net new units</div>
+                      <div class="x-card--counter"><span>2017</span>Expected completion</div><a class="x-card--toggler" href="#" data-label="Hide details">Show details</a>
+                    </div>
+                    <div class="x-card--details">
+                      <div class="x-card--map">
+                        <div class="x-card--map-in"></div>
+                      </div>
+                      <div class="x-card--fields">
+                        <div class="x-card--field"><span>Permit ID</span>N201603172392</div>
+                        <div class="x-card--field"><span>Net new affordable units</span>15</div>
+                        <div class="x-card--field"><span>Permit issued</span>2015</div>
+                        <div class="x-card--field"><span>Total affordable units</span>15</div>
+                        <div class="x-card--field"><span>Developer</span>Shorenstein Properties</div>
+                        <div class="x-card--field"><span>Total units</span>650</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="x-in--item">
+                  <div class="x-card">
+                    <div class="x-card--photo" style="background-image: url(http://placehold.it/244x164);"></div>
+                    <div class="x-card--info">
+                      <div class="x-card--box">
+                        <div class="x-card--title">Trinity Plaza Phase 4</div>
+                        <div class="x-card--text">150 van ness ave</div>
+                      </div>
+                      <div class="x-card--btns"><a class="x-card--btn" href="#"><i class="icon-share"></i></a><a class="x-card--btn" href="#"><i class="icon-edit"></i></a></div>
+                    </div>
+                    <div class="x-card--tools">
+                      <div class="x-card--counter"><span>117</span>Net new units</div>
+                      <div class="x-card--counter"><span>2017</span>Expected completion</div><a class="x-card--toggler" href="#" data-label="Hide details">Show details</a>
+                    </div>
+                    <div class="x-card--details">
+                      <div class="x-card--map">
+                        <div class="x-card--map-in"></div>
+                      </div>
+                      <div class="x-card--fields">
+                        <div class="x-card--field"><span>Permit ID</span>N201603172392</div>
+                        <div class="x-card--field"><span>Net new affordable units</span>15</div>
+                        <div class="x-card--field"><span>Permit issued</span>2015</div>
+                        <div class="x-card--field"><span>Total affordable units</span>15</div>
+                        <div class="x-card--field"><span>Developer</span>Shorenstein Properties</div>
+                        <div class="x-card--field"><span>Total units</span>650</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="x-in--item">
+                  <div class="x-card without-photo is-checked">
+                    <div class="x-card--info">
+                      <div class="x-card--in">
+                        <div class="x-card--box">
+                          <div class="x-card--title">Trinity Plaza Phase 4</div>
+                          <div class="x-card--text">150 van ness ave</div>
+                        </div>
+                      </div>
+                      <div class="x-card--counter"><span>117</span>Net new units</div>
+                      <div class="x-card--counter"><span>2017</span>Expected completion</div><a class="x-card--toggler" href="#" data-label="Hide details">Show details</a>
+                      <div class="x-card--btns"><a class="x-card--btn" href="#"><i class="icon-share"></i></a><a class="x-card--btn" href="#"><i class="icon-edit"></i></a></div>
+                    </div>
+                    <div class="x-card--details">
+                      <div class="x-card--map">
+                        <div class="x-card--map-in"></div>
+                      </div>
+                      <div class="x-card--fields">
+                        <div class="x-card--field"><span>Permit ID</span>N201603172392</div>
+                        <div class="x-card--field"><span>Net new affordable units</span>15</div>
+                        <div class="x-card--field"><span>Permit issued</span>2015</div>
+                        <div class="x-card--field"><span>Total affordable units</span>15</div>
+                        <div class="x-card--field"><span>Developer</span>Shorenstein Properties</div>
+                        <div class="x-card--field"><span>Total units</span>650</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="x-in--item">
+                  <div class="x-card without-photo is-checked">
+                    <div class="x-card--info">
+                      <div class="x-card--in">
+                        <div class="x-card--box">
+                          <div class="x-card--title">Trinity Plaza Phase 4</div>
+                        </div>
+                      </div>
+                      <div class="x-card--counter"><span>117</span>Net new units</div>
+                      <div class="x-card--counter"><span>2017</span>Expected completion</div><a class="x-card--toggler" href="#" data-label="Hide details">Show details</a>
+                      <div class="x-card--btns"><a class="x-card--btn" href="#"><i class="icon-share"></i></a><a class="x-card--btn" href="#"><i class="icon-edit"></i></a></div>
+                    </div>
+                    <div class="x-card--details">
+                      <div class="x-card--map">
+                        <div class="x-card--map-in"></div>
+                      </div>
+                      <div class="x-card--fields">
+                        <div class="x-card--field"><span>Permit ID</span>N201603172392</div>
+                        <div class="x-card--field"><span>Net new affordable units</span>15</div>
+                        <div class="x-card--field"><span>Permit issued</span>2015</div>
+                        <div class="x-card--field"><span>Total affordable units</span>15</div>
+                        <div class="x-card--field"><span>Developer</span>Shorenstein Properties</div>
+                        <div class="x-card--field"><span>Total units</span>650</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="x-in--item">
+                  <div class="x-card">
+                    <div class="x-card--photo" style="background-image: url(http://placehold.it/244x164);"></div>
+                    <div class="x-card--info">
+                      <div class="x-card--box">
+                        <div class="x-card--title">Trinity Plaza Phase 4</div>
+                        <div class="x-card--text">150 van ness ave</div>
+                      </div>
+                      <div class="x-card--btns"><a class="x-card--btn" href="#"><i class="icon-share"></i></a><a class="x-card--btn" href="#"><i class="icon-edit"></i></a></div>
+                    </div>
+                    <div class="x-card--tools">
+                      <div class="x-card--counter"><span>117</span>Net new units</div>
+                      <div class="x-card--counter"><span>2017</span>Expected completion</div><a class="x-card--toggler" href="#" data-label="Hide details">Show details</a>
+                    </div>
+                    <div class="x-card--details">
+                      <div class="x-card--map">
+                        <div class="x-card--map-in"></div>
+                      </div>
+                      <div class="x-card--fields">
+                        <div class="x-card--field"><span>Permit ID</span>N201603172392</div>
+                        <div class="x-card--field"><span>Net new affordable units</span>15</div>
+                        <div class="x-card--field"><span>Permit issued</span>2015</div>
+                        <div class="x-card--field"><span>Total affordable units</span>15</div>
+                        <div class="x-card--field"><span>Developer</span>Shorenstein Properties</div>
+                        <div class="x-card--field"><span>Total units</span>650</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="x-in--item">
+                  <div class="x-card is-checked">
+                    <div class="x-card--photo" style="background-image: url(http://placehold.it/244x164);"></div>
+                    <div class="x-card--info">
+                      <div class="x-card--box">
+                        <div class="x-card--title">Trinity Plaza Phase 4</div>
+                        <div class="x-card--text">150 van ness ave</div>
+                      </div>
+                      <div class="x-card--btns"><a class="x-card--btn" href="#"><i class="icon-share"></i></a><a class="x-card--btn" href="#"><i class="icon-edit"></i></a></div>
+                    </div>
+                    <div class="x-card--tools">
+                      <div class="x-card--counter"><span>117</span>Net new units</div>
+                      <div class="x-card--counter"><span>2017</span>Expected completion</div><a class="x-card--toggler" href="#" data-label="Hide details">Show details</a>
+                    </div>
+                    <div class="x-card--details">
+                      <div class="x-card--map">
+                        <div class="x-card--map-in"></div>
+                      </div>
+                      <div class="x-card--fields">
+                        <div class="x-card--field"><span>Permit ID</span>N201603172392</div>
+                        <div class="x-card--field"><span>Net new affordable units</span>15</div>
+                        <div class="x-card--field"><span>Permit issued</span>2015</div>
+                        <div class="x-card--field"><span>Total affordable units</span>15</div>
+                        <div class="x-card--field"><span>Developer</span>Shorenstein Properties</div>
+                        <div class="x-card--field"><span>Total units</span>650</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="x-pagi">
+                <ul class="x-pagi--list">
+                  <li class="x-pagi--prev"><a href="#">Prev page</a></li>
+                  <li class="x-pagi--item"><span>1</span></li>
+                  <li class="x-pagi--item"><a href="#">2</a></li>
+                  <li class="x-pagi--more">. . .</li>
+                  <li class="x-pagi--item"><a href="#">83</a></li>
+                  <li class="x-pagi--next"><a href="#">Next page</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
