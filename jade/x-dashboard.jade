@@ -30,32 +30,16 @@ html
 				.x-filter
 					.x-filter--title Expected completion
 
-					label.x-filter--radio
-						input(type="radio" name="ec" value="1" checked)
-						span All
-
-					label.x-filter--radio
-						input(type="radio" name="ec" value="2")
-						span 2017
-
-					label.x-filter--radio
-						input(type="radio" name="ec" value="3")
-						span 2018
-
-					label.x-filter--radio
-						input(type="radio" name="ec" value="4")
-						span 2019+
+					a(href="#").x-filter--radio.is-checked All
+					a(href="#").x-filter--radio 2017
+					a(href="#").x-filter--radio 2018
+					a(href="#").x-filter--radio 2019+
 
 				.x-filter
 					.x-filter--title Project size
 
-					label.x-filter--radio
-						input(type="radio" name="ps" value="1" checked)
-						span All
-
-					label.x-filter--radio
-						input(type="radio" name="ps" value="2")
-						span 10+ units
+					a(href="#").x-filter--radio.is-checked All
+					a(href="#").x-filter--radio 10+ units
 
 				.x-join
 					.x-join--btn: a(href="#").x-btn.is-block Join as a contributer

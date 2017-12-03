@@ -33,4 +33,11 @@ $(document).ready(function () {
 		})
 	});
 
+	$('.x-filter--radio').on('click', function (e) {
+		e.preventDefault();
+
+		$(this).addClass('is-checked');
+		$(this).closest('.x-filter').find('.is-checked').not(this).removeClass('is-checked');
+	});
+
 });
