@@ -1786,6 +1786,7 @@ body {
 		.font (11px, 20px, 500);
 
 		&:hover { background: fade(@text-sf, 1); }
+		&:before { content: "Show details"; }
 	}
 
 	&--details {
@@ -1873,6 +1874,11 @@ body {
 		.size (16px, 16px);
 		.icon ('\e915');
 		.font (7px, 16px);
+	}
+
+	&.is-expanded & {
+		&--toggler:before { content: "Hide details"; }
+		&--details { .display (block); }
 	}
 }
 
