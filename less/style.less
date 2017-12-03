@@ -1184,18 +1184,20 @@ body {
 	}
 
 	&--item { float: left;
-		a, button {
+		> * {
 			text-decoration: none;
 			color: @white;
 			border: 1px solid transparent;
 			padding: 8px 17px;
 			border-radius: 4px;
 			margin: 0 0 0 7px;
+			background: none;
 
 			.display (block);
 			.font (13px, 20px, 500);
 
-			&:hover { color: fade(@white, 60); }
+			a&:hover,
+			button&:hover { color: fade(@white, 60); }
 			img {
 				overflow: hidden;
 				border-radius: 28px;
@@ -1206,11 +1208,9 @@ body {
 			}
 		}
 
-		&.is-join {
-			a, button {
-				border-color: fade(@white, 30);
-				background: #192743;
-			}
+		&.is-join > * {
+			border-color: fade(@white, 30);
+			background: #192743;
 		}
 	}
 }
@@ -1469,18 +1469,20 @@ body {
 	}
 
 	&--item { float: left;
-		a, button {
+		> * {
 			text-decoration: none;
 			color: @white;
 			border: 1px solid transparent;
 			padding: 7px 15px 9px;
 			border-radius: 8px;
 			margin: 0 0 0 7px;
+			background: none;
 
 			.display (block);
 			.font (15px, 20px, 500);
 
-			&:hover { color: fade(@white, 60); }
+			a&:hover,
+			button&:hover, { color: fade(@white, 60); }
 			img {
 				overflow: hidden;
 				border-radius: 28px;
@@ -1491,11 +1493,9 @@ body {
 			}
 		}
 
-		&.is-join  {
-			a, button {
-				border-color: fade(@white, 30);
-				background: #192743;
-			}
+		&.is-join > * {
+			border-color: fade(@white, 30);
+			background: #192743;
 		}
 	}
 }

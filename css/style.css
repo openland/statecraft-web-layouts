@@ -3048,8 +3048,7 @@ a.st-header--label:hover {
 .x-header--item {
   float: left;
 }
-.x-header--item a,
-.x-header--item button {
+.x-header--item > * {
   text-decoration: none;
   color: #ffffff;
   border: 1px solid transparent;
@@ -3057,17 +3056,17 @@ a.st-header--label:hover {
   -webkit-border-radius: 4px;
   border-radius: 4px;
   margin: 0 0 0 7px;
+  background: none;
   display: block;
   font-size: 13px;
   line-height: 20px;
   font-weight: 500;
 }
-.x-header--item a:hover,
-.x-header--item button:hover {
+a.x-header--item > *:hover,
+button.x-header--item > *:hover {
   color: rgba(255, 255, 255, 0.6);
 }
-.x-header--item a img,
-.x-header--item button img {
+.x-header--item > * img {
   overflow: hidden;
   -webkit-border-radius: 28px;
   border-radius: 28px;
@@ -3077,8 +3076,7 @@ a.st-header--label:hover {
   width: 28px;
   height: 28px;
 }
-.x-header--item.is-join a,
-.x-header--item.is-join button {
+.x-header--item.is-join > * {
   border-color: rgba(255, 255, 255, 0.3);
   background: #192743;
 }
@@ -3416,8 +3414,7 @@ a.st-header--label:hover {
 .x-top--item {
   float: left;
 }
-.x-top--item a,
-.x-top--item button {
+.x-top--item > * {
   text-decoration: none;
   color: #ffffff;
   border: 1px solid transparent;
@@ -3425,17 +3422,17 @@ a.st-header--label:hover {
   -webkit-border-radius: 8px;
   border-radius: 8px;
   margin: 0 0 0 7px;
+  background: none;
   display: block;
   font-size: 15px;
   line-height: 20px;
   font-weight: 500;
 }
-.x-top--item a:hover,
-.x-top--item button:hover {
+a.x-top--item > *:hover,
+button.x-top--item > *:hover {
   color: rgba(255, 255, 255, 0.6);
 }
-.x-top--item a img,
-.x-top--item button img {
+.x-top--item > * img {
   overflow: hidden;
   -webkit-border-radius: 28px;
   border-radius: 28px;
@@ -3445,8 +3442,7 @@ a.st-header--label:hover {
   width: 28px;
   height: 28px;
 }
-.x-top--item.is-join a,
-.x-top--item.is-join button {
+.x-top--item.is-join > * {
   border-color: rgba(255, 255, 255, 0.3);
   background: #192743;
 }
