@@ -92,6 +92,12 @@ mixin loader
 	.st-loader&attributes(attributes): svg(viewBox="25 25 50 50").st-loader--svg
 		circle(cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10").st-loader--circle
 
+mixin loaderLine
+	.x-lineloader&attributes(attributes)
+		.x-lineloader--bar
+		.x-lineloader--bar
+		.x-lineloader--bar
+
 mixin chart
 	.st-chart&attributes(attributes)
 		.st-chart--in: canvas
