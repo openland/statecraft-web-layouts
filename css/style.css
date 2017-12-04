@@ -3565,10 +3565,6 @@ button.x-top--item > *:hover {
 }
 .x-filter--radio:after {
   text-align: center;
-  -webkit-transition: 200ms all ease;
-  -o-transition: 200ms all ease;
-  transition: 200ms all ease;
-  opacity: 0;
   content: '\e915';
   font-family: 'icomoon' !important;
   speak: none;
@@ -3581,7 +3577,7 @@ button.x-top--item > *:hover {
   -moz-osx-font-smoothing: grayscale;
   font-size: 9px;
   line-height: 40px;
-  display: block;
+  display: none;
   position: absolute;
   top: 0;
   right: 0;
@@ -3598,7 +3594,7 @@ button.x-top--item > *:hover {
   color: #6B50FF;
 }
 .x-filter--radio.is-checked:after {
-  opacity: 1;
+  display: block;
 }
 .x-join {
   padding: 3px 0 0;
