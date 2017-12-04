@@ -3693,6 +3693,9 @@ button.x-top--item > *:hover {
   border: 1px solid rgba(38, 38, 38, 0.08);
   padding: 0 0 0 243px;
   color: #262626;
+  overflow: hidden;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
   position: relative;
   top: auto;
   right: auto;
