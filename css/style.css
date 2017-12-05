@@ -4004,6 +4004,16 @@ button.x-top--item > *:hover {
 .x-card.is-expanded .x-card--details {
   display: block;
 }
+.x-empty {
+  text-align: center;
+  padding: 334px 0 50px;
+  color: rgba(38, 38, 38, 0.8);
+  background: url(../img/x-empty.png) center 36px no-repeat;
+  -webkit-background-size: 265px 265px;
+  background-size: 265px 265px;
+  font-size: 18px;
+  line-height: 20px;
+}
 .st-loader {
   background: #f2f5f8;
   z-index: 9999;
