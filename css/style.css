@@ -3047,16 +3047,14 @@ a.st-header--label:hover {
 }
 .x-header--item {
   float: left;
+  margin: 0 0 0 25px;
 }
 .x-header--item > * {
   text-decoration: none;
   color: #ffffff;
-  border: 1px solid transparent;
-  padding: 8px 17px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-  margin: 0 0 0 7px;
+  padding: 9px 0;
   background: none;
+  border: none;
   display: block;
   font-size: 13px;
   line-height: 20px;
@@ -3077,8 +3075,11 @@ button.x-header--item > *:hover {
   height: 28px;
 }
 .x-header--item.is-join > * {
-  border-color: rgba(255, 255, 255, 0.3);
+  padding: 8px 17px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   background: #192743;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
 }
 .x-intro {
   background: #182642 url(../img/x-intro.png) center top no-repeat;
@@ -3261,6 +3262,13 @@ button.x-header--item > *:hover {
   color: rgba(24, 38, 66, 0.7);
   font-size: 17px;
   line-height: 25px;
+}
+.x-insights--text a {
+  text-decoration: none;
+  color: #4766ff;
+}
+.x-insights--text a:hover {
+  opacity: 0.7;
 }
 .x-pipeline {
   background: #ffffff;

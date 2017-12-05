@@ -130,7 +130,7 @@ mixin x-insights (t, i)
 			each item in i
 				.x-insights--item
 					.x-insights--label= item[0]
-					.x-insights--text= item[1]
+					.x-insights--text!= item[1]
 
 mixin x-card (hidePhoto, hideText)
 	.x-card(class=(hidePhoto) ? 'without-photo' : '')&attributes(attributes)
