@@ -48,8 +48,6 @@ html
 			.col-lg-9
 				.x-in--title Buildings
 				.x-in--list
-					.x-empty No buildings match your criteria
-
 					+loaderLine
 
 					.x-in--item: +x-card (true).is-checked
@@ -59,6 +57,8 @@ html
 					.x-in--item: +x-card (true, true).is-checked
 					.x-in--item: +x-card
 					.x-in--item: +x-card.is-checked
+
+					.x-empty No buildings match your criteria
 
 				.x-pagi: ul.x-pagi--list
 					li.x-pagi--prev: a(href="#") Prev page
