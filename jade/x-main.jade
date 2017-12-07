@@ -10,13 +10,13 @@ html
 				a(href="#").x-header--logo: img(src="img/logotype.svg" alt="")
 				a(href="#").x-header--open.visible-xs
 
-				ul.x-header--nav.hidden-xs
+				.x-header--nav.hidden-xs: ul
 					li.x-header--item: a(href="#") Explore Pipeline
 					li.x-header--item: span #[img(src="http://placehold.it/28")]Yury Lifshits
 					li.x-header--item: button Sign In
 					li.x-header--item.is-join: button Join
 
-				.x-header--menu: ul.x-header--nav
+				.x-header--menu: .x-header--nav: ul
 					li.x-header--item.is-block: a(href="#") Explore Pipeline
 					li.x-header--item: span #[img(src="http://placehold.it/28")]Yury Lifshits
 					li.x-header--item.is-join: button Sign Out
