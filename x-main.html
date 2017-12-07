@@ -14,8 +14,9 @@
     <div class="x-page">
       <div class="x-intro">
         <div class="x-container">
-          <div class="x-header"><a class="x-header--logo" href="#"><img src="img/logotype.svg" alt=""></a>
-            <ul class="x-header--nav">
+          <div class="x-header"><a class="x-header--logo" href="#"><img src="img/logotype.svg" alt=""></a><a class="x-header--open visible-xs" href="#"></a>
+            <ul class="x-header--nav hidden-xs">
+              <li class="x-header--item"><a href="#">Explore Pipeline</a></li>
               <li class="x-header--item"><span><img src="http://placehold.it/28">Yury Lifshits</span></li>
               <li class="x-header--item">
                 <button>Sign In</button>
@@ -24,9 +25,18 @@
                 <button>Join</button>
               </li>
             </ul>
+            <div class="x-header--menu">
+              <ul class="x-header--nav">
+                <li class="x-header--item is-block"><a href="#">Explore Pipeline</a></li>
+                <li class="x-header--item"><span><img src="http://placehold.it/28">Yury Lifshits</span></li>
+                <li class="x-header--item is-join">
+                  <button>Sign Out</button>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="x-intro--in">
-            <div class="x-intro--title">San Francisco Housing Forecast 2017-18</div>
+            <div class="x-intro--title">San Francisco<br> Housing Forecast<br> 2017-18</div>
             <div class="x-intro--tools">
               <form class="x-intro--form" method="POST" action="">
                 <input class="x-intro--input" type="text" placeholder="Email"/>
@@ -41,8 +51,8 @@
       </div>
       <div class="x-counters">
         <div class="x-container">
-          <div class="row">
-            <div class="col-lg-3">
+          <div class="row sm-gutter-16">
+            <div class="col-xs-12 col-sm-3">
               <div class="x-counter">
                 <div class="x-counter--in">
                   <div class="x-counter--count">415</div>
@@ -51,7 +61,7 @@
                 <div class="x-counter--label">72 verified</div>
               </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-xs-12 col-sm-3">
               <div class="x-counter">
                 <div class="x-counter--in">
                   <div class="x-counter--count">2753</div>
@@ -60,7 +70,7 @@
                 <div class="x-counter--label">1115 verified</div>
               </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-xs-12 col-sm-3">
               <div class="x-counter">
                 <div class="x-counter--in">
                   <div class="x-counter--count">3153</div>
@@ -69,7 +79,7 @@
                 <div class="x-counter--label">342 verified</div>
               </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-xs-12 col-sm-3">
               <div class="x-counter">
                 <div class="x-counter--in">
                   <div class="x-counter--count">5000</div>
@@ -84,21 +94,21 @@
       <div class="x-insights">
         <div class="x-container">
           <div class="row">
-            <div class="col-lg-3">
-              <div class="x-insights--title">Insights</div>
+            <div class="col-xs-12 col-sm-3">
+              <div class="x-insights--title">Summary</div>
             </div>
-            <div class="col-lg-9">
+            <div class="col-xs-12 col-sm-9">
               <div class="x-insights--item">
-                <div class="x-insights--label">Accuracy</div>
-                <div class="x-insights--text">City doesn’t have <a href="#">accurate</a> info for expected completion. Collaboration with developer community is necessary.</div>
+                <div class="x-insights--label">Measuring housing is critical for informed urban planning decisions</div>
+                <div class="x-insights--text">This site makes it easy to compare current and future levels of housing production with the Mayor’s annual goal and the long-term <a href="https://abag.ca.gov/planning/housingneeds/">RHNA goals</a> set by the state.</div>
               </div>
               <div class="x-insights--item">
-                <div class="x-insights--label">Below target</div>
-                <div class="x-insights--text">Judging from the current data, the city is well behind mayor’s goal. However, major changes are possible after new inputs from developers.</div>
+                <div class="x-insights--label">Accuracy is a work in progress</div>
+                <div class="x-insights--text">Unit counts and expected completion times change frequently. Our pipeline editing tools allow all stakeholders to add, correct, and expand individual records.</div>
               </div>
               <div class="x-insights--item">
-                <div class="x-insights--label">Affordable</div>
-                <div class="x-insights--text">Similar collaborative pipeline review is required to develop accurate projections for affordable production.</div>
+                <div class="x-insights--label">Housing production is facing a severe downturn</div>
+                <div class="x-insights--text">Based on the current data, housing production in 2017-2018 will represent a significant drop from record-high 2016 level of 5000+ units. The extend of this downturn will be more clear as verification process progresses forward.</div>
               </div>
             </div>
           </div>
@@ -107,14 +117,12 @@
       <div class="x-pipeline">
         <div class="x-container">
           <div class="row">
-            <div class="col-lg-4">
+            <div class="col-xs-12 col-sm-4">
               <div class="x-pipeline--title">Pipeline</div>
               <div class="x-pipeline--text">List of development projects likely to be completed in 2017-2018.</div>
               <div class="x-pipeline--btn"><a class="x-btn is-block" href="#">Explore the pipeline</a></div>
             </div>
-            <div class="col-lg-8">
-              <div class="x-pipeline--list"><img src="img/x-pipeline--list.png" alt=""></div>
-            </div>
+            <div class="col-xs-12 col-sm-8"><a class="x-pipeline--list" href="#"><img src="img/x-pipeline--list.png" alt=""></a></div>
           </div>
         </div>
       </div>
@@ -141,21 +149,29 @@
       <div class="x-insights with-bg">
         <div class="x-container">
           <div class="row">
-            <div class="col-lg-3">
-              <div class="x-insights--title">About SF Housing Forecast</div>
+            <div class="col-xs-12 col-sm-3">
+              <div class="x-insights--title">About Us</div>
             </div>
-            <div class="col-lg-9">
+            <div class="col-xs-12 col-sm-9">
               <div class="x-insights--item">
-                <div class="x-insights--label">Objective</div>
-                <div class="x-insights--text">Create the most accurate and transparent forecast for housing production in the city.</div>
+                <div class="x-insights--label">Housing Forecast is an initiative by Statecraft</div>
+                <div class="x-insights--text">This is <a href="https://statecraft.one/">Statecraft</a>’s second project for San Francisco, following <a href="https://sfhousing.statecraft.one/">housing production report</a> for 2014-2017 Q1 period.</div>
               </div>
               <div class="x-insights--item">
-                <div class="x-insights--label">Team</div>
-                <div class="x-insights--text">This project is an initiative of Statecraft, a San-Francisco-based government analytics company.</div>
+                <div class="x-insights--label">Initial data comes from DataSF</div>
+                <div class="x-insights--text">The initial list of in-construction buildings was created using open datasets published by <a href="https://datasf.org/">DataSF</a>, most notably quarterly development pipelines and building permits database.</div>
               </div>
               <div class="x-insights--item">
-                <div class="x-insights--label">Data</div>
-                <div class="x-insights--text">The initial list of construction projects is created using open data published by DataSF (development pipeline and building permits). Further details are sources from our community of contributors.</div>
+                <div class="x-insights--label">Information verification is done by a community of contributors</div>
+                <div class="x-insights--text">Our database is expanded and corrected using sources like developer websites, local press, DAHLIA listings, and Google Maps. Records that are double checked without surfacing conflicting information are marked as verified.</div>
+              </div>
+              <div class="x-insights--item">
+                <div class="x-insights--label">This is just a start</div>
+                <div class="x-insights--text">In the near future, we hope to expand Statecraft platform to cover affordable housing, zoning capacity, approval timelines, parking requirements, and property taxes.</div>
+              </div>
+              <div class="x-insights--item">
+                <div class="x-insights--label">Let’s explore how we can collaborate</div>
+                <div class="x-insights--text">Statecraft is actively looking for partners, both within and outside of government, to create a shared data ecosystem to drive informed and fair urban planning decisions. Drop us a line at <a href="mailto:yury@statecraft.one">yury@statecraft.one</a> to start a conversation.</div>
               </div>
             </div>
           </div>

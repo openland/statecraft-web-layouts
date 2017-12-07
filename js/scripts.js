@@ -25,6 +25,30 @@ $(document).ready(function () {
 		$(this).closest('.x-card').toggleClass('is-expanded');
 	});
 
+	$('.x-filters--head').on('click', function (e) {
+		e.preventDefault();
+
+		$(this).closest('.x-filters').toggleClass('is-shown');
+	});
+
+	$('.x-filters--close').on('click', function (e) {
+		e.preventDefault();
+
+		$(this).closest('.x-filters').toggleClass('is-shown');
+	});
+
+	$('.x-top--open').on('click', function (e) {
+		e.preventDefault();
+
+		$(this).closest('.x-top').toggleClass('is-shown');
+	});
+
+	$('.x-header--open').on('click', function (e) {
+		e.preventDefault();
+
+		$(this).closest('.x-header').toggleClass('is-shown');
+	});
+
 	$('.x-notify').on('click', function (e) {
 		e.preventDefault();
 

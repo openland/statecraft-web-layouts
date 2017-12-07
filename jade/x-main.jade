@@ -8,32 +8,39 @@ html
 		.x-intro: .x-container
 			.x-header
 				a(href="#").x-header--logo: img(src="img/logotype.svg" alt="")
+				a(href="#").x-header--open.visible-xs
 
-				ul.x-header--nav
+				ul.x-header--nav.hidden-xs
+					li.x-header--item: a(href="#") Explore Pipeline
 					li.x-header--item: span #[img(src="http://placehold.it/28")]Yury Lifshits
 					li.x-header--item: button Sign In
 					li.x-header--item.is-join: button Join
 
+				.x-header--menu: ul.x-header--nav
+					li.x-header--item.is-block: a(href="#") Explore Pipeline
+					li.x-header--item: span #[img(src="http://placehold.it/28")]Yury Lifshits
+					li.x-header--item.is-join: button Sign Out
+
 			.x-intro--in
-				.x-intro--title San Francisco Housing Forecast 2017-18
+				.x-intro--title San Francisco#[br] Housing Forecast#[br] 2017-18
 
 				+x-intro--tools
 
-		.x-counters: .x-container: .row
-			.col-lg-3: +x-counter ('415', 'Projects tracked', '72 verified')
-			.col-lg-3: +x-counter ('2753', '2017 net new units', '1115 verified')
-			.col-lg-3: +x-counter ('3153', '2018 net new units', '342 verified')
-			.col-lg-3: +x-counter ('5000', 'Mayor\'s goal', 'Annual target')
+		.x-counters: .x-container: .row.sm-gutter-16
+			.col-xs-12.col-sm-3: +x-counter ('415', 'Projects tracked', '72 verified')
+			.col-xs-12.col-sm-3: +x-counter ('2753', '2017 net new units', '1115 verified')
+			.col-xs-12.col-sm-3: +x-counter ('3153', '2018 net new units', '342 verified')
+			.col-xs-12.col-sm-3: +x-counter ('5000', 'Mayor\'s goal', 'Annual target')
 
-		+x-insights ('Insights', [['Accuracy', 'City doesn’t have <a href="#">accurate</a> info for expected completion. Collaboration with developer community is necessary.'], ['Below target', 'Judging from the current data, the city is well behind mayor’s goal. However, major changes are possible after new inputs from developers.'], ['Affordable', 'Similar collaborative pipeline review is required to develop accurate projections for affordable production.']])
+		+x-insights ('Summary', [['Measuring housing is critical for informed urban planning decisions', 'This site makes it easy to compare current and future levels of housing production with the Mayor’s annual goal and the long-term <a href="https://abag.ca.gov/planning/housingneeds/">RHNA goals</a> set by the state.'], ['Accuracy is a work in progress', 'Unit counts and expected completion times change frequently. Our pipeline editing tools allow all stakeholders to add, correct, and expand individual records.'], ['Housing production is facing a severe downturn', 'Based on the current data, housing production in 2017-2018 will represent a significant drop from record-high 2016 level of 5000+ units. The extend of this downturn will be more clear as verification process progresses forward.']])
 
 		.x-pipeline: .x-container: .row
-			.col-lg-4
+			.col-xs-12.col-sm-4
 				.x-pipeline--title Pipeline
 				.x-pipeline--text List of development projects likely to be completed in 2017-2018.
 				.x-pipeline--btn: a(href="#").x-btn.is-block Explore the pipeline
 
-			.col-lg-8: .x-pipeline--list: img(src="img/x-pipeline--list.png" alt="")
+			.col-xs-12.col-sm-8: a(href="#").x-pipeline--list: img(src="img/x-pipeline--list.png" alt="")
 
 		.x-form: .x-container
 			.x-form--title Make this forecast more accurate
@@ -45,7 +52,7 @@ html
 				.x-form--field: input(type="text" placeholder="Organization").x-input
 				.x-form--btn: button(type="submit").x-btn.is-block Join as a contributor
 
-		+x-insights ('About SF Housing Forecast', [['Objective', 'Create the most accurate and transparent forecast for housing production in the city.'], ['Team', 'This project is an initiative of Statecraft, a San-Francisco-based government analytics company.'], ['Data', 'The initial list of construction projects is created using open data published by DataSF (development pipeline and building permits). Further details are sources from our community of contributors.']]).with-bg
+		+x-insights ('About Us', [['Housing Forecast is an initiative by Statecraft', 'This is <a href="https://statecraft.one/">Statecraft</a>’s second project for San Francisco, following <a href="https://sfhousing.statecraft.one/">housing production report</a> for 2014-2017 Q1 period.'], ['Initial data comes from DataSF', 'The initial list of in-construction buildings was created using open datasets published by <a href="https://datasf.org/">DataSF</a>, most notably quarterly development pipelines and building permits database.'], ['Information verification is done by a community of contributors', 'Our database is expanded and corrected using sources like developer websites, local press, DAHLIA listings, and Google Maps. Records that are double checked without surfacing conflicting information are marked as verified.'], ['This is just a start', 'In the near future, we hope to expand Statecraft platform to cover affordable housing, zoning capacity, approval timelines, parking requirements, and property taxes.'], ['Let’s explore how we can collaborate', 'Statecraft is actively looking for partners, both within and outside of government, to create a shared data ecosystem to drive informed and fair urban planning decisions. Drop us a line at <a href="mailto:yury@statecraft.one">yury@statecraft.one</a> to start a conversation.']]).with-bg
 
 		.x-footer: .x-container
 			.x-footer--title San Francisco Housing Forecast 2017-18

@@ -125,49 +125,32 @@ mixin x-counter (c, n, l)
 
 mixin x-insights (t, i)
 	.x-insights&attributes(attributes): .x-container: .row
-		.col-lg-3: .x-insights--title= t
-		.col-lg-9
+		.col-xs-12.col-sm-3: .x-insights--title= t
+		.col-xs-12.col-sm-9
 			each item in i
 				.x-insights--item
 					.x-insights--label= item[0]
 					.x-insights--text!= item[1]
 
-mixin x-card (hidePhoto, hideText)
-	.x-card(class=(hidePhoto) ? 'without-photo' : '')&attributes(attributes)
-		if (hidePhoto)
-			.x-card--info
-				.x-card--in: .x-card--box
-					.x-card--title Trinity Plaza Phase 4
+mixin x-card (hideText)
+	.x-card&attributes(attributes)
+		.x-card--photo(style="background-image: url(http://placehold.it/244x164)")
+		.x-card--info
+			.x-card--box
+				.x-card--title Trinity Plaza Phase 4
 
-					if (!hideText)
-						.x-card--text 150 van ness ave
+				if (!hideText)
+					.x-card--text 150 van ness ave
 
-				.x-card--counter #[span 117]Net new units
-				.x-card--counter #[span 2017]Expected completion
+			.x-card--btns
+				a(href="#").x-card--btn: i.icon-share
+				a(href="#").x-card--btn: i.icon-edit
 
-				a(href="#").x-card--toggler
+		.x-card--tools
+			.x-card--counter #[span 117]Net new units
+			.x-card--counter #[span 2017]Expected completion
 
-				.x-card--btns
-					a(href="#").x-card--btn: i.icon-share
-					a(href="#").x-card--btn: i.icon-edit
-		else
-			.x-card--photo(style="background-image: url(http://placehold.it/244x164)")
-			.x-card--info
-				.x-card--box
-					.x-card--title Trinity Plaza Phase 4
-
-					if (!hideText)
-						.x-card--text 150 van ness ave
-
-				.x-card--btns
-					a(href="#").x-card--btn: i.icon-share
-					a(href="#").x-card--btn: i.icon-edit
-
-			.x-card--tools
-				.x-card--counter #[span 117]Net new units
-				.x-card--counter #[span 2017]Expected completion
-
-				a(href="#").x-card--toggler
+			a(href="#").x-card--toggler
 
 		.x-card--details
 			.x-card--map(style="background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=54.939320,37.450654&zoom=15&size=500x500)")

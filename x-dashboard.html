@@ -13,45 +13,56 @@
   <body>
     <div class="x-page">
       <div class="x-top">
-        <div class="x-container is-wide clearfix"><a class="x-top--label" href="#">San Francisco Housing Forecast</a>
-          <div class="x-top--tabs"><a class="x-top--tab is-active" href="#">Dashboard</a><a class="x-top--tab" href="#">Pipeline Explorer</a></div>
-          <ul class="x-top--nav">
+        <div class="x-container is-wide clearfix"><a class="x-top--label hidden-xs hidden-sm" href="#">San Francisco Housing Forecast</a><a class="x-top--label visible-xs visible-sm" href="#">SF Housing Forecast</a><a class="x-top--open visible-xs" href="#"></a>
+          <div class="x-top--tabs hidden-xs"><a class="x-top--tab is-active" href="#">Dashboard</a><a class="x-top--tab" href="#">Pipeline Explorer</a></div>
+          <ul class="x-top--nav hidden-xs">
             <li class="x-top--item"><span><img src="http://placehold.it/28">Yury Lifshits</span></li>
-            <li class="x-top--item">
-              <button>Sign In</button>
-            </li>
             <li class="x-top--item is-join">
-              <button>Join</button>
+              <button>Sign Out</button>
             </li>
           </ul>
         </div>
+        <div class="x-top--menu">
+          <div class="x-container">
+            <div class="x-top--tabs"><a class="x-top--tab is-active" href="#">Dashboard</a><a class="x-top--tab" href="#">Pipeline Explorer</a></div>
+            <ul class="x-top--nav">
+              <li class="x-top--item"><span><img src="http://placehold.it/28">Yury Lifshits</span></li>
+              <li class="x-top--item is-join">
+                <button>Sign Out</button>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="x-notify">Record saved<i class="icon-close"></i></div>
+      <!--.x-notify Record saved#[i.icon-close]-->
       <div class="x-in">
         <div class="x-container is-wide">
-          <div class="row">
-            <div class="col-lg-3">
-              <div class="x-in--title">Pipeline filters</div>
-              <div class="x-search">
-                <form class="x-search--box" method="POST" action="">
-                  <input class="x-search--input" type="text" placeholder="Search">
-                  <button class="x-search--button" type="submit"><i class="icon-search"></i></button>
-                </form>
-              </div>
-              <div class="x-filter">
-                <div class="x-filter--title">Expected completion</div><a class="x-filter--radio is-checked" href="#">All</a><a class="x-filter--radio" href="#">2017</a><a class="x-filter--radio" href="#">2018</a><a class="x-filter--radio" href="#">2019+</a>
-              </div>
-              <div class="x-filter">
-                <div class="x-filter--title">Project size</div><a class="x-filter--radio is-checked" href="#">All</a><a class="x-filter--radio" href="#">10+ units</a>
-              </div>
-              <div class="x-join">
-                <div class="x-join--btn"><a class="x-btn is-block" href="#">Join as a contributer</a></div>
-                <div class="x-join--btn"><a class="x-btn is-outline is-block" href="#">Add a project</a></div>
+          <div class="row md-gutter-20">
+            <div class="col-xs-12 col-md-3">
+              <div class="x-filters"><a class="x-filters--head" href="#">Filters</a>
+                <div class="x-filters--body"><a class="x-filters--close" href="#"><i class="icon-close"></i></a>
+                  <div class="x-in--title">Pipeline filters</div>
+                  <div class="x-search">
+                    <form class="x-search--box" method="POST" action="">
+                      <input class="x-search--input" type="text" placeholder="Search">
+                      <button class="x-search--button" type="submit"><i class="icon-search"></i></button>
+                    </form>
+                  </div>
+                  <div class="x-filter">
+                    <div class="x-filter--title">Expected completion</div><a class="x-filter--radio is-checked" href="#">All</a><a class="x-filter--radio" href="#">2017</a><a class="x-filter--radio" href="#">2018</a><a class="x-filter--radio" href="#">2019+</a>
+                  </div>
+                  <div class="x-filter">
+                    <div class="x-filter--title">Project size</div><a class="x-filter--radio is-checked" href="#">All</a><a class="x-filter--radio" href="#">10+ units</a>
+                  </div>
+                  <div class="x-join">
+                    <div class="x-join--btn"><a class="x-btn is-block" href="#">Join as a contributer</a></div>
+                    <div class="x-join--btn"><a class="x-btn is-outline is-block" href="#">Add a project</a></div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-lg-9">
-              <div class="x-in--title">42<span>Buildings</span>2347<span>Net new units</span><span class="is-verified">Verified</span>12<span>Buildings</span>1145<span>Net new units</span></div>
-              <div class="x-in--title">Buildings</div>
+            <div class="col-xs-12 col-md-9">
+              <div class="x-in--title hidden-xs">42<span>Buildings</span>2347<span>Net new units</span><span class="is-verified">Verified</span>12<span>Buildings</span>1145<span>Net new units</span></div>
               <div class="x-in--list">
                 <div class="x-lineloader">
                   <div class="x-lineloader--bar"></div>
@@ -59,17 +70,18 @@
                   <div class="x-lineloader--bar"></div>
                 </div>
                 <div class="x-in--item">
-                  <div class="x-card without-photo is-checked">
+                  <div class="x-card is-checked">
+                    <div class="x-card--photo" style="background-image: url(http://placehold.it/244x164);"></div>
                     <div class="x-card--info">
-                      <div class="x-card--in">
-                        <div class="x-card--box">
-                          <div class="x-card--title">Trinity Plaza Phase 4</div>
-                          <div class="x-card--text">150 van ness ave</div>
-                        </div>
+                      <div class="x-card--box">
+                        <div class="x-card--title">Trinity Plaza Phase 4</div>
+                        <div class="x-card--text">150 van ness ave</div>
                       </div>
+                      <div class="x-card--btns"><a class="x-card--btn" href="#"><i class="icon-share"></i></a><a class="x-card--btn" href="#"><i class="icon-edit"></i></a></div>
+                    </div>
+                    <div class="x-card--tools">
                       <div class="x-card--counter"><span>117</span>Net new units</div>
                       <div class="x-card--counter"><span>2017</span>Expected completion</div><a class="x-card--toggler" href="#"></a>
-                      <div class="x-card--btns"><a class="x-card--btn" href="#"><i class="icon-share"></i></a><a class="x-card--btn" href="#"><i class="icon-edit"></i></a></div>
                     </div>
                     <div class="x-card--details">
                       <div class="x-card--map" style="background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=54.939320,37.450654&amp;zoom=15&amp;size=500x500);"></div>
@@ -198,17 +210,18 @@
                   </div>
                 </div>
                 <div class="x-in--item">
-                  <div class="x-card without-photo is-checked">
+                  <div class="x-card is-checked">
+                    <div class="x-card--photo" style="background-image: url(http://placehold.it/244x164);"></div>
                     <div class="x-card--info">
-                      <div class="x-card--in">
-                        <div class="x-card--box">
-                          <div class="x-card--title">Trinity Plaza Phase 4</div>
-                          <div class="x-card--text">150 van ness ave</div>
-                        </div>
+                      <div class="x-card--box">
+                        <div class="x-card--title">Trinity Plaza Phase 4</div>
+                        <div class="x-card--text">150 van ness ave</div>
                       </div>
+                      <div class="x-card--btns"><a class="x-card--btn" href="#"><i class="icon-share"></i></a><a class="x-card--btn" href="#"><i class="icon-edit"></i></a></div>
+                    </div>
+                    <div class="x-card--tools">
                       <div class="x-card--counter"><span>117</span>Net new units</div>
                       <div class="x-card--counter"><span>2017</span>Expected completion</div><a class="x-card--toggler" href="#"></a>
-                      <div class="x-card--btns"><a class="x-card--btn" href="#"><i class="icon-share"></i></a><a class="x-card--btn" href="#"><i class="icon-edit"></i></a></div>
                     </div>
                     <div class="x-card--details">
                       <div class="x-card--map" style="background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=54.939320,37.450654&amp;zoom=15&amp;size=500x500);"></div>
@@ -244,16 +257,17 @@
                   </div>
                 </div>
                 <div class="x-in--item">
-                  <div class="x-card without-photo is-checked">
+                  <div class="x-card is-checked">
+                    <div class="x-card--photo" style="background-image: url(http://placehold.it/244x164);"></div>
                     <div class="x-card--info">
-                      <div class="x-card--in">
-                        <div class="x-card--box">
-                          <div class="x-card--title">Trinity Plaza Phase 4</div>
-                        </div>
+                      <div class="x-card--box">
+                        <div class="x-card--title">Trinity Plaza Phase 4</div>
                       </div>
+                      <div class="x-card--btns"><a class="x-card--btn" href="#"><i class="icon-share"></i></a><a class="x-card--btn" href="#"><i class="icon-edit"></i></a></div>
+                    </div>
+                    <div class="x-card--tools">
                       <div class="x-card--counter"><span>117</span>Net new units</div>
                       <div class="x-card--counter"><span>2017</span>Expected completion</div><a class="x-card--toggler" href="#"></a>
-                      <div class="x-card--btns"><a class="x-card--btn" href="#"><i class="icon-share"></i></a><a class="x-card--btn" href="#"><i class="icon-edit"></i></a></div>
                     </div>
                     <div class="x-card--details">
                       <div class="x-card--map" style="background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=54.939320,37.450654&amp;zoom=15&amp;size=500x500);"></div>
@@ -383,16 +397,6 @@
                   </div>
                 </div>
                 <div class="x-empty">No buildings match your criteria</div>
-              </div>
-              <div class="x-pagi">
-                <ul class="x-pagi--list">
-                  <li class="x-pagi--prev"><a href="#">Prev page</a></li>
-                  <li class="x-pagi--item"><span>1</span></li>
-                  <li class="x-pagi--item"><a href="#">2</a></li>
-                  <li class="x-pagi--more">. . .</li>
-                  <li class="x-pagi--item"><a href="#">83</a></li>
-                  <li class="x-pagi--next"><a href="#">Next page</a></li>
-                </ul>
               </div>
             </div>
           </div>
